@@ -260,6 +260,6 @@
     "phrases_per_readout_max": 28,
     "requested_phrases_per_readout": 10,
     "truncated": 0,
-    "interpretation": "Output-count contract mismatch; this alone does not establish invalid semantic content. Sampling remains paused."
+    "interpretation": "Original phrase-count mismatch accepted by the user after qualitative review; preserve all outputs. Remaining stochastic samples resumed. Semantic limitations documented in oracle-output-policy.json."
   }
 }
