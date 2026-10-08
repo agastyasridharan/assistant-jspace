@@ -1,0 +1,265 @@
+{
+  "records": 52,
+  "verified_input_token_ids": 3328,
+  "all_user_positions": {
+    "readouts": 13312,
+    "top1_agreement": 0.9797175480769231,
+    "mean_top8_overlap": 0.9825345552884616,
+    "identical_top8_set": 0.8635817307692307,
+    "identical_top8_order": 0.5344050480769231,
+    "mean_absolute_log_ratio_error": 0.04013391604261062,
+    "median_absolute_log_ratio_error": 0.030548426614497082,
+    "duplicate_decoding_readouts": 13
+  },
+  "unique_anchor_positions": {
+    "readouts": 1280,
+    "top1_agreement": 0.9875,
+    "mean_top8_overlap": 0.9826171875,
+    "identical_top8_set": 0.86171875,
+    "identical_top8_order": 0.55,
+    "mean_absolute_log_ratio_error": 0.03925571439875763,
+    "median_absolute_log_ratio_error": 0.03127857579575399,
+    "duplicate_decoding_readouts": 0
+  },
+  "by_layer": {
+    "8": {
+      "readouts": 1664,
+      "top1_agreement": 0.9777644230769231,
+      "mean_top8_overlap": 0.9786658653846154,
+      "identical_top8_set": 0.8365384615384616,
+      "identical_top8_order": 0.5018028846153846,
+      "mean_absolute_log_ratio_error": 0.039055809463457956,
+      "median_absolute_log_ratio_error": 0.029016975019170055,
+      "duplicate_decoding_readouts": 8
+    },
+    "16": {
+      "readouts": 1664,
+      "top1_agreement": 0.9795673076923077,
+      "mean_top8_overlap": 0.9825721153846154,
+      "identical_top8_set": 0.8629807692307693,
+      "identical_top8_order": 0.5408653846153846,
+      "mean_absolute_log_ratio_error": 0.03480602006321381,
+      "median_absolute_log_ratio_error": 0.027440743234268816,
+      "duplicate_decoding_readouts": 0
+    },
+    "24": {
+      "readouts": 1664,
+      "top1_agreement": 0.9873798076923077,
+      "mean_top8_overlap": 0.9816706730769231,
+      "identical_top8_set": 0.8551682692307693,
+      "identical_top8_order": 0.5408653846153846,
+      "mean_absolute_log_ratio_error": 0.041017536693265376,
+      "median_absolute_log_ratio_error": 0.03255447399147249,
+      "duplicate_decoding_readouts": 1
+    },
+    "32": {
+      "readouts": 1664,
+      "top1_agreement": 0.9735576923076923,
+      "mean_top8_overlap": 0.9805438701923077,
+      "identical_top8_set": 0.8455528846153846,
+      "identical_top8_order": 0.4795673076923077,
+      "mean_absolute_log_ratio_error": 0.03691081528456901,
+      "median_absolute_log_ratio_error": 0.02952949549463396,
+      "duplicate_decoding_readouts": 0
+    },
+    "40": {
+      "readouts": 1664,
+      "top1_agreement": 0.9759615384615384,
+      "mean_top8_overlap": 0.9849759615384616,
+      "identical_top8_set": 0.8798076923076923,
+      "identical_top8_order": 0.5817307692307693,
+      "mean_absolute_log_ratio_error": 0.03909468490354211,
+      "median_absolute_log_ratio_error": 0.031043167505683922,
+      "duplicate_decoding_readouts": 0
+    },
+    "44": {
+      "readouts": 1664,
+      "top1_agreement": 0.9807692307692307,
+      "mean_top8_overlap": 0.9852013221153846,
+      "identical_top8_set": 0.8816105769230769,
+      "identical_top8_order": 0.5480769230769231,
+      "mean_absolute_log_ratio_error": 0.03942377340296423,
+      "median_absolute_log_ratio_error": 0.0313619591961074,
+      "duplicate_decoding_readouts": 0
+    },
+    "48": {
+      "readouts": 1664,
+      "top1_agreement": 0.9795673076923077,
+      "mean_top8_overlap": 0.9833984375,
+      "identical_top8_set": 0.8701923076923077,
+      "identical_top8_order": 0.5228365384615384,
+      "mean_absolute_log_ratio_error": 0.03871458216778296,
+      "median_absolute_log_ratio_error": 0.029834710034015277,
+      "duplicate_decoding_readouts": 0
+    },
+    "56": {
+      "readouts": 1664,
+      "top1_agreement": 0.9831730769230769,
+      "mean_top8_overlap": 0.9832481971153846,
+      "identical_top8_set": 0.8768028846153846,
+      "identical_top8_order": 0.5594951923076923,
+      "mean_absolute_log_ratio_error": 0.05209210957582456,
+      "median_absolute_log_ratio_error": 0.0336788617799636,
+      "duplicate_decoding_readouts": 4
+    }
+  },
+  "top1_mismatches": 270,
+  "mismatch_local_margin_median": 0.030731201171875,
+  "mismatch_local_margin_max": 0.14307689666748047,
+  "examples": [
+    {
+      "anchor": [
+        "pre_fact"
+      ],
+      "position": 20,
+      "token": ",",
+      "local": [
+        " mood",
+        " positive",
+        " good",
+        " happy",
+        " happiness",
+        " emotional",
+        " ,",
+        " mental"
+      ],
+      "neuronpedia": [
+        " mood",
+        " positive",
+        " good",
+        " happy",
+        " happiness",
+        " emotional",
+        " ,",
+        " mental"
+      ]
+    },
+    {
+      "anchor": [
+        "fact"
+      ],
+      "position": 33,
+      "token": "ol",
+      "local": [
+        " overdose",
+        " maximum",
+        " toxic",
+        " doses",
+        " dose",
+        " ,",
+        " total",
+        " dosage"
+      ],
+      "neuronpedia": [
+        " overdose",
+        " maximum",
+        " toxic",
+        " doses",
+        " dose",
+        " ,",
+        " total",
+        " dosage"
+      ]
+    },
+    {
+      "anchor": [
+        "primary"
+      ],
+      "position": 38,
+      "token": " is",
+      "local": [
+        " pain",
+        " completely",
+        " all",
+        " $",
+        " ,",
+        "止痛",
+        " sleep",
+        " good"
+      ],
+      "neuronpedia": [
+        " pain",
+        " all",
+        " $",
+        " completely",
+        " ,",
+        "止痛",
+        " sleep",
+        " one"
+      ]
+    },
+    {
+      "anchor": [
+        "relief"
+      ],
+      "position": 40,
+      "token": "!",
+      "local": [
+        " good",
+        "1",
+        " safety",
+        " healthy",
+        " health",
+        "0",
+        "2",
+        " #"
+      ],
+      "neuronpedia": [
+        " good",
+        "1",
+        " safety",
+        " healthy",
+        " health",
+        "0",
+        " #",
+        "2"
+      ]
+    },
+    {
+      "anchor": [
+        "request"
+      ],
+      "position": 48,
+      "token": "?",
+      "local": [
+        " request",
+        " requests",
+        " requesting",
+        " drug",
+        " Request",
+        " requested",
+        " prescription",
+        " drugs"
+      ],
+      "neuronpedia": [
+        " request",
+        " requests",
+        " requesting",
+        " drug",
+        " Request",
+        " requested",
+        " prescription",
+        " supply"
+      ]
+    }
+  ],
+  "limitations": [
+    "Readout matching uses decoded token strings because Neuronpedia does not return readout vocabulary IDs.",
+    "Neuronpedia runtime model/lens revisions and numerical precision are not exposed by this API; exact artifact identity is unverified.",
+    "API returns top eight only. Local ranks 9-50 and fixed-concept scores are not externally validated.",
+    "Numerical agreement validates computation, not whether a readout represents the user or Assistant."
+  ],
+  "neuronpedia_source_commit_inspected": "748d8d985c2c657960fea4177a40201fdecfcd29",
+  "manifest_sha256": "17ae2080e3c77a6d201747682e6cd146ad179e325f047d942c87cc158caac9a3",
+  "method": "POST /api/lens/prompt; JPP_LENS; exact inputTokenIds; topN=8; filterNonWordTokens=false; numCompletionTokens=0. Compare matching zero-based block outputs across all stored user-token positions.",
+  "o_lens_issue": {
+    "greedy_readouts": 156,
+    "total_phrases": 3037,
+    "phrases_exactly_eight_tokens": 3037,
+    "phrases_per_readout_min": 14,
+    "phrases_per_readout_max": 28,
+    "requested_phrases_per_readout": 10,
+    "truncated": 0,
+    "interpretation": "Output-count contract mismatch; this alone does not establish invalid semantic content. Sampling remains paused."
+  }
+}

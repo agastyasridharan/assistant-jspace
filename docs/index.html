@@ -13,6 +13,7 @@
 <div id="predictions"></div><div id="comparison" class="comparison"></div>
 <div class="readhead"><h2>J++ readouts</h2><label><input type="checkbox" id="filtered" checked> Semantic filter</label><label>Show <select id="topk"><option value="10">Top 10</option><option value="25">Top 25</option><option value="50">Top 50</option></select></label><label><input type="checkbox" id="trajectory"> Explore all user tokens</label></div>
 <p class="hint">Block outputs, zero-based. Values are raw lens logits. Hover a token for its ID and score. Word lists do not uniquely resolve perspective.</p>
+<p class="hint">External check: Neuronpedia J++ agrees on the top token in 97.97% of 13,312 raw readouts (98.75% at anchors); mean top-eight overlap 98.25%. <a href="validation.html">Validation details</a>.</p>
 <div id="jpp"></div>
 <div class="readhead"><h2>O-lens readouts</h2><span class="hint">Block 45 input · same activation as J++ block 44 · greedy</span></div>
 <div id="oracle" class="comparison"></div>
