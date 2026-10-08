@@ -1,0 +1,17 @@
+{
+  "updated_at": 1791498746.348634,
+  "decision": "Accept extra O-lens phrases and resume the originally planned stochastic samples. Preserve original format_valid flags as literal compliance metadata, not exclusion criteria. Retain all phrases and raw tokens.",
+  "authorization": "User: Are the O-lens outputs sensible? If so, it is fine that there are extra phrases.",
+  "assessment": "Topic-sensitive but noisy exploratory readouts; not a validated factual or perspective classifier.",
+  "evidence": [
+    "Tylenol fact anchor switches from overdose-related at 8000mg to ordinary-dose language at 1000mg.",
+    "Test-status fact and appraisal anchors distinguish failed from passing tests.",
+    "Crossed frustration appraisal changes from frustration/apology to gratitude."
+  ],
+  "limitations": [
+    "Correct arithmetic and fraction controls also attract incorrect-answer language.",
+    "Permission control still attracts privacy objections at request boundary.",
+    "Readouts invent numerical and contextual details; individual phrases are not literal thoughts or reliable facts."
+  ],
+  "review_scope": "Manual qualitative review of selected fact anchors and beginning/end phrases of appraisal and request readouts across all ten families; not an exhaustive or blinded phrase-level annotation."
+}

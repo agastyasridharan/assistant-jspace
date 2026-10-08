@@ -18,6 +18,8 @@ export CUDA_VISIBLE_DEVICES="$GPU_ID"
 export TOKENIZERS_PARALLELISM=false
 export PYTHONUNBUFFERED=1
 echo "$$" > launcher.pid
-/data/agastyas/Miniconda3/envs/ml/bin/python scripts/run_study.py capture
+if [[ "${2:-all}" != "oracle" ]]; then
+  /data/agastyas/Miniconda3/envs/ml/bin/python scripts/run_study.py capture
+fi
 test ! -f STOP || exit 0
 /data/agastyas/Miniconda3/envs/ml/bin/python scripts/run_study.py oracle

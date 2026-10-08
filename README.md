@@ -31,3 +31,5 @@ An assessment that differs from the user's stated stance and follows factual con
 `scripts/sync_publish.py` only reads this run's remote results, exports an allowlist of study artifacts, and publishes changed dashboard data. It never starts or resumes GPU work. No API keys are needed for the inference or dashboard pipeline.
 
 Source implementations: [J++](https://github.com/safety-research/jpp_lens), [J++ weights](https://huggingface.co/koayon/jpp-lenses), [oracle checkpoint and code](https://huggingface.co/ceselder/oracle-lens-qwen3.6-27b).
+
+Output policy amendment: extra O-lens phrases are accepted by user authorization; every phrase remains visible. Original exact-format flags are preserved as metadata. See `data/oracle-output-policy.json` for qualitative evidence and control failures. This changes acceptance of phrase counts, not prompts, seeds, anchors, or decoding. Resume only the remaining decoder work with `scripts/launch.sh 0 oracle`.
