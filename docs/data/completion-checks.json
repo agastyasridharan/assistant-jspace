@@ -1,0 +1,19 @@
+{
+  "verified_at": 1791501195.601372,
+  "records": 52,
+  "greedy_sites": 156,
+  "samples_expected": 195,
+  "samples_saved": 195,
+  "missing_samples": 0,
+  "extra_samples": 0,
+  "empty_samples": 0,
+  "truncated_samples": [
+    "frustration-crossed-copy-0__primary__seed1703"
+  ],
+  "non_eight_token_phrases": 1,
+  "note": "One sample reached the 256-token cap with a final four-token phrase. Retained unchanged; no replacement or rerun. Extra phrase counts accepted under the documented policy.",
+  "prefix_checks_passed": 26,
+  "canary_topic_hits": 3,
+  "gpu0_idle_after_completion": true,
+  "analysis_status": "Inference complete; systematic perspective scoring and cross-seed analysis remain outstanding."
+}
