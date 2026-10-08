@@ -36,7 +36,7 @@ def main():
         p=results/'checks'/f'{name}.json'
         if p.exists():checks[name]=json.loads(p.read_text())
     write(dest/'checks.json',checks)
-    status=json.loads((results/'status.json').read_text()) if (results/'status.json').exists() else dict(stage='preparing',reason='Awaiting reservation confirmation and completion of asset checks')
+    status=json.loads((results/'status.json').read_text()) if (results/'status.json').exists() else dict(stage='preparing',reason='Worker status not yet available')
     # Tracebacks and remote filesystem details are kept locally, not published.
     status.pop('traceback',None);status.pop('pid',None)
     if 'error' in status:status['error']=status['error'][:500]

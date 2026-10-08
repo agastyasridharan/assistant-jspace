@@ -198,7 +198,9 @@ def oracle_decode():
         for g in seq[:,len(ids):].tolist():
             # Remove only batch padding after first EOS; preserve all actual generated text and token IDs.
             end=next((i+1 for i,t in enumerate(g) if t in stop),len(g)); g=g[:end]
-            phrases=parse_generated_phrases(g,tok,10)
+            # Preserve every parsed phrase, including extras; do not let the native
+            # parser's usual K cap conceal an output-format failure.
+            phrases=parse_generated_phrases(g,tok,len(g)+1)
             raw=tok.decode(g,skip_special_tokens=False)
             lengths=[len(p) for p in phrases]
             results.append(dict(raw=raw,token_ids=g,phrases=[tok.decode(p) for p in phrases],phrase_lengths=lengths,
