@@ -1,0 +1,1 @@
+{"run_id":"assistant-jspace-20261008-v1","status":{"stage":"preparing","reason":"Awaiting reservation confirmation and completion of asset checks"},"records":[],"total_records":52,"completed_records":0,"oracle_sites":0,"oracle_samples":0,"manifest_sha256":"17ae2080e3c77a6d201747682e6cd146ad179e325f047d942c87cc158caac9a3","invariants_checked":0,"expected_oracle_sites":null}

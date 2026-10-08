@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Assistant perspective · Qwen3.6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
+<link href="style.css" rel="stylesheet"></head>
+<body>
+<header><h1>Assistant perspective <span>· Qwen3.6</span></h1><nav aria-label="Views"><button data-view="pairs" class="active">Pairs</button><button data-view="overview">Overview</button><button data-view="method">Method</button></nav><span id="live">Connecting</span></header>
+<main>
+<div id="status" role="status">Loading run status…</div>
+<section id="pairs">
+<div class="toolbar"><label>Task <select id="family"></select></label><label>Instruction <select id="task"><option value="assist">Assist</option><option value="copy">Copy</option></select></label><label>Appraisal <select id="attitude"><option value="stated">Original</option><option value="crossed">Crossed</option></select></label><label>Read at <select id="anchor"><option value="primary">Primary boundary</option><option value="fact">Fact boundary</option><option value="request">Request boundary</option></select></label><button id="prev" aria-label="Previous task">←</button><button id="next" aria-label="Next task">→</button></div>
+<div id="predictions"></div><div id="comparison" class="comparison"></div>
+<div class="readhead"><h2>J++ readouts</h2><label><input type="checkbox" id="filtered" checked> Semantic filter</label><label>Show <select id="topk"><option value="10">Top 10</option><option value="25">Top 25</option><option value="50">Top 50</option></select></label><label><input type="checkbox" id="trajectory"> Explore all user tokens</label></div>
+<p class="hint">Block outputs, zero-based. Values are raw lens logits. Hover a token for its ID and score. Word lists do not uniquely resolve perspective.</p>
+<div id="jpp"></div>
+<div class="readhead"><h2>O-lens readouts</h2><span class="hint">Block 45 input · same activation as J++ block 44 · greedy</span></div>
+<div id="oracle" class="comparison"></div>
+<div class="readhead"><h2>Actual replies</h2><span class="hint">Generated after the complete request · greedy · 256-token cap</span></div>
+<div id="replies" class="comparison"></div>
+</section>
+<section id="overview" hidden><h2>All conditions</h2><p class="hint">Every condition is retained. These 52 configurations are a diagnostic pilot, not 52 independent scenarios.</p><div id="overview-table"></div></section>
+<section id="method" hidden>
+<h2>What this pilot tests</h2><p>Do readouts follow the user's expressed stance, the Assistant's assessment, or both? An assessment that conflicts with the user's belief and follows the factual controls counts as evidence for an Assistant-side perspective. Explicit first-person wording is not required.</p>
+<p>Eight families test conflicting appraisals or goals. Bereavement and frustration are auxiliary relational-role tests. Each factual pair keeps the user's stance fixed. Arithmetic, tutoring, and frustration also cross the stated appraisal. Every message is tested as a direct request and under an exact-copy instruction.</p>
+<h2>Readout positions</h2><p>Fact boundary; primary appraisal boundary; final token of the user's request. Confidentiality has no separate appraisal boundary. Bereavement uses the end of the letters sentence. Tylenol additionally includes the pre-dose prefix, the historical “is” anchor, and the completed relief statement. The highlighted token marks exactly how much text the activation has seen. Later text is muted.</p>
+<h2>Measurements and controls</h2><p>J++ is read at block outputs 8, 16, 24, 32, 40, 44, 48, and 56. Full user-token trajectories are secondary. Raw and alphanumeric-filtered rankings are retained. Fixed concept groups use audited single-token IDs; scores and ranks are exploratory diagnostics, not probabilities of a thought.</p>
+<p>The O-lens receives the raw residual entering block 45 through the released overwrite hook and native prompt builder, requesting ten phrases of eight tokens. It sees no source text or perspective labels. Malformed and truncated outputs remain visible. Paired and unrelated activation controls reference their corresponding decodes because the oracle prompt is identical for all sites. A no-injection baseline measures the decoder prior. Five seeded samples at temperature 0.7 and top-p 0.9 are taken at a fixed quarter of sites.</p>
+<p>The public O-lens checkpoint does not specify its training placeholder. This pilot fixes <code>&lt;|box_start|&gt;</code>, as in the existing local replication, before study readouts and requires independent topic-recovery calibration. This is an implementation limitation; calibration does not prove full fidelity.</p>
+<p>Checks include exact anchor-token mapping, equality of block 44 output and block 45 input, final-head parity, and shared-prefix invariance across every factual pair. Failure stops the worker. Generated replies are external behavioral checks, not ground truth about internal state. No automated perspective classification is presented as a validated result.</p>
+<h2>Provenance</h2><div id="provenance"></div>
+<p><a href="data/manifest.json">Frozen prompts and settings</a> · <a href="data/checks.json">Validation and decoder controls</a> · <a href="data/summary.json">Run status</a> · <a href="https://github.com/agastyasridharan/assistant-jspace">Code and data</a></p>
+<p><a href="https://huggingface.co/koayon/jpp-lenses">J++ checkpoint</a> · <a href="https://github.com/safety-research/jpp_lens">J++ implementation</a> · <a href="https://huggingface.co/ceselder/oracle-lens-qwen3.6-27b">O-lens checkpoint</a></p>
+</section>
+</main><footer><span>Assistant perspective · diagnostic pilot</span><span id="updated">Results refresh automatically</span></footer>
+<script src="app.js"></script></body></html>

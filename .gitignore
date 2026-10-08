@@ -1,0 +1,7 @@
+local/
+__pycache__/
+*.pyc
+*.pt
+*.npy
+.DS_Store
+vendor/
