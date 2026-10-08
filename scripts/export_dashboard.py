@@ -65,10 +65,14 @@ def main():
     # Tracebacks and remote filesystem details are kept locally, not published.
     status.pop('traceback',None);status.pop('pid',None)
     if 'error' in status:status['error']=status['error'][:500]
+    issue_path=results/'issue.json'
+    issue=json.loads(issue_path.read_text()) if issue_path.exists() else None
+    if issue and status['stage'] in ['paused','failed']:
+        status['reason']=issue['reason']
     summary=dict(run_id=manifest['run_id'],status=status,records=records,total_records=52,completed_records=len(records),
         oracle_sites=oracle_count,oracle_samples=sample_count,manifest_sha256=hashlib.sha256((ROOT/'data/manifest.json').read_bytes()).hexdigest(),
         invariants_checked=len([p for p in (results/'checks').glob('*.json') if '-assist.' in p.name or '-copy.' in p.name]),
-        expected_oracle_sites=len(checks.get('oracle_sites',[])) or None)
+        expected_oracle_sites=len(checks.get('oracle_sites',[])) or None,issue=issue)
     site_count=len(checks.get('oracle_sites',[]))
     summary['eta']=dict(capture=estimate(capture_times,52),
         oracle=estimate(oracle_times,site_count) if site_count else dict(state='unmeasured'),
