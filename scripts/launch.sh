@@ -2,7 +2,11 @@
 set -euo pipefail
 cd /data/agastyas/assistant-jspace-20261008
 test -f reservation.json || { echo 'Reservation confirmation missing; refusing GPU launch.'; exit 2; }
+# Existing shared env.sh defines and references no_proxy in one export; nounset
+# must be off while sourcing that file. Restore strict mode before any work.
+set +u
 source /data/agastyas/jlens_multi/env.sh
+set -u
 GPU_ID="${1:-0}"
 exec 9>"/data/agastyas/user-style-gpu-${GPU_ID}.lock"
 flock -n 9 || { echo 'GPU lock held; refusing launch.'; exit 3; }
