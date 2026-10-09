@@ -1,0 +1,13 @@
+{
+  "model": "gpt-5.4",
+  "prompt_sha256": "333af39723c88d7553b0c9ff16a7a112c6b7cc96b983fae919b7e3a5700877d0",
+  "protocol_sha256": "25a3a903cee74e9135427e7baa1bd5c40671b4da7b7e50cb2ba775dde349d29e",
+  "items": 351,
+  "started": 1791503586.214779,
+  "returned_models": [
+    "gpt-5.4-2026-03-05"
+  ],
+  "completed_items": 351,
+  "primary_reviewed": 52,
+  "discarded_pass": "GPT-4.1; qualitative QA found category conflation. Not used in aggregate results."
+}

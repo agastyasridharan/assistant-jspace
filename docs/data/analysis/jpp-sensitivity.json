@@ -1,0 +1,530 @@
+[
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "dangerous",
+    "delta": 4.062866508960724
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "toxic",
+    "delta": 4.834876775741577
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "overdose",
+    "delta": 2.531139373779297
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "dangerous",
+    "delta": 0.18835699558258057
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "toxic",
+    "delta": 0.6138117611408234
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "overdose",
+    "delta": 1.1064491271972656
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "dangerous",
+    "delta": 0.43285036087036133
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "toxic",
+    "delta": 0.4061276912689209
+  },
+  {
+    "family": "tylenol",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "overdose",
+    "delta": 0.31250667572021484
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "dangerous",
+    "delta": 4.8176663517951965
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "toxic",
+    "delta": 5.129846811294556
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "overdose",
+    "delta": 2.7618446350097656
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "dangerous",
+    "delta": 0.02867180109024048
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "toxic",
+    "delta": 0.21491701900959015
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "overdose",
+    "delta": 0.3044252395629883
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "dangerous",
+    "delta": 0.5905368328094482
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "toxic",
+    "delta": 0.7526001930236816
+  },
+  {
+    "family": "tylenol",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "overdose",
+    "delta": 0.2152414321899414
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.928124189376831
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": -0.03430294990539551
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": 0.19577170349657536
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": 0.00319654680788517
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": 0.27790309488773346
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 0.2528643310070038
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 1.1840338706970215
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 1.1152889728546143
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": 0.19479642808437347
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": 0.025389060378074646
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": 0.39905478060245514
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": -0.006745323538780212
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.928124189376831
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": -0.03430294990539551
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": -0.118924081325531
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": -0.13427859544754028
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": -0.10761615633964539
+  },
+  {
+    "family": "tutoring",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 0.07981407642364502
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 1.1840338706970215
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 1.1152889728546143
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": -0.21075545251369476
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": -0.06819295883178711
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": -0.07393109798431396
+  },
+  {
+    "family": "tutoring",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 0.20431730151176453
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.8292782306671143
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 0.7811111211776733
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": 0.32287168502807617
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": 0.3998788297176361
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": 1.9646414369344711
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 1.2741370648145676
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.42733585834503174
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 0.1242142915725708
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": 0.2193007469177246
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": -0.007167994976043701
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": 0.8649597018957138
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "stated",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 0.3147616386413574
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.8292782306671143
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 0.7811111211776733
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": -0.1769176721572876
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": 0.04317831993103027
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": -0.04090872406959534
+  },
+  {
+    "family": "arithmetic",
+    "task": "assist",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": -0.09770047664642334
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "incorrect",
+    "delta": 0.42733585834503174
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "fact",
+    "candidate": "error",
+    "delta": 0.1242142915725708
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "incorrect",
+    "delta": -0.0017633438110351562
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "primary",
+    "candidate": "error",
+    "delta": 0.22597593069076538
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "incorrect",
+    "delta": 0.07124966382980347
+  },
+  {
+    "family": "arithmetic",
+    "task": "copy",
+    "attitude": "crossed",
+    "anchor": "request",
+    "candidate": "error",
+    "delta": 0.07373517751693726
+  }
+]

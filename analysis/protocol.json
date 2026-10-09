@@ -1,0 +1,14 @@
+{
+ "version":"existing-pilot-analysis-v1",
+ "status":"Exploratory; fixed after qualitative inspection but before aggregate counting",
+ "scope":"52 saved prompt conditions; 156 greedy O-lens decodes; 195 stochastic samples; no new subject-model inference",
+ "primary_unit":"One condition at the final user-request boundary, greedy O-lens, n=52. Copy conditions refer to modeling the speaker of the embedded message, not necessarily the outer copying requester.",
+ "secondary":"fact and appraisal boundaries; 39 sampled sites with five samples each; layers 8,16,24,32,40,44,48,56 for J++",
+ "labels":"Nonexclusive content evidence. Explicit user attribution; implicit speaker-state/goal content compatible with continuation; explicitly assistant-attributed assessment or intention; unattributed assessment; unattributed response directive; other person attribution; factual content; unsupported details; contradictions.",
+ "strict_assistant":"Assistant-as-speaker first-person assessment/plan, explicit assistant naming, or a direct interpersonal response addressed to the user. Bare judgments and bare imperatives are candidates only, not strict attribution. No first-person requirement for broader attribution supported by matched controls.",
+ "controls":"Fact tracking is distinct from perspective ownership. Compare independently annotated opposing outcomes in factual pairs, with contradictory decodes counted separately. Mere presence of assistant-sounding wording is not a passed control.",
+ "jpp":"Use saved per-candidate logits and ranks. For correctness contrast use error/incorrect versus correct; failed versus passed for tests when available; confirmed versus uncertain for booking; failed/unresolved versus fixed for frustration. Average retained spelling variants within each word, then equally weight words. Other families use one-sided topic evidence explicitly identified as such, not invented opposing candidates. No extra model forward passes.",
+ "uncertainty":"No population confidence intervals or significance tests across correlated prompt conditions, layers, phrases, or seeds. No claim that a lens-negative condition lacks the underlying representation.",
+ "review":"Automated annotation sees only available prefix plus one readout, opaque randomized IDs, no paired output or main/control designation. Review every primary request-boundary annotation and selected counterexamples; publish original labels and any overrides. No claim of independent human validation.",
+ "sensitivity":"Report whole-readout evidence and evidence present within first ten phrases. First-ten counts are based on all annotated evidence indices, not a new decoding. Report stochastic presence fractions and unsupported content separately. One truncated sample retained unchanged."
+}

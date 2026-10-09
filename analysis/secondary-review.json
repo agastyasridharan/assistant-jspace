@@ -1,0 +1,6 @@
+{
+ "arithmetic-stated-copy-0__request": {
+  "state_b_evidence": [4,8],
+  "reason": "The decode also presupposes correct reasoning/proof in phrases 4 and 8 without explicitly attributing that correctness to the user's belief. Treat it as mixed rather than a clean factual assessment. The original automated annotation already labeled both phrases as unattributed assessments."
+ }
+}
