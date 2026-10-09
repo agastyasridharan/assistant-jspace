@@ -1,0 +1,12 @@
+{
+  "model": [
+    "gpt-5.4-2026-03-05"
+  ],
+  "prompt_sha256": "8ceabf4b97fb66c973c5c3dc9a90366d6930c4b044adb9450178d900c2f05d65",
+  "source_sha256": "104b6e6cc0d890519ad26111300d031405dd4288d775623670fb489927bd145b",
+  "readouts": 351,
+  "phrases": 6875,
+  "created_at": 1791515077.710733,
+  "status": "Automated exhaustive reannotation; qualitative spot checks, not full independent validation",
+  "prior_analysis": "Preserved unchanged; broader labels used in Pairs only"
+}
