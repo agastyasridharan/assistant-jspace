@@ -30,9 +30,9 @@ def write(path,obj):
     tmp=path.with_suffix('.tmp');tmp.write_text(data);tmp.replace(path)
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--results',default=str(ROOT/'local/results'));args=ap.parse_args()
-    results=Path(args.results);dest=ROOT/'docs/data';dest.mkdir(exist_ok=True,parents=True)
-    manifest=json.loads((ROOT/'data/manifest.json').read_text())
+    ap=argparse.ArgumentParser();ap.add_argument('--results',default=str(ROOT/'local/results'));ap.add_argument('--dest',default=str(ROOT/'docs/data'));ap.add_argument('--manifest',default=str(ROOT/'data/manifest.json'));args=ap.parse_args()
+    results=Path(args.results);dest=Path(args.dest);dest.mkdir(exist_ok=True,parents=True)
+    manifest=json.loads(Path(args.manifest).read_text())
     write(dest/'manifest.json',manifest)
     records=[];oracle_count=sample_count=0
     capture_times=[];oracle_times=[];sample_times=[]
@@ -70,7 +70,7 @@ def main():
     if issue and status['stage'] in ['paused','failed']:
         status['reason']=issue['reason']
     summary=dict(run_id=manifest['run_id'],status=status,records=records,total_records=52,completed_records=len(records),
-        oracle_sites=oracle_count,oracle_samples=sample_count,manifest_sha256=hashlib.sha256((ROOT/'data/manifest.json').read_bytes()).hexdigest(),
+        oracle_sites=oracle_count,oracle_samples=sample_count,manifest_sha256=hashlib.sha256(Path(args.manifest).read_bytes()).hexdigest(),
         invariants_checked=len([p for p in (results/'checks').glob('*.json') if '-assist.' in p.name or '-copy.' in p.name]),
         expected_oracle_sites=len(checks.get('oracle_sites',[])) or None,issue=issue)
     site_count=len(checks.get('oracle_sites',[]))

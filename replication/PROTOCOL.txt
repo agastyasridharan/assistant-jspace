@@ -1,0 +1,61 @@
+Llama/Tulu paired replication of assistant-jspace-20261008-v1
+
+Freeze before subject-model inference. Reuse every literal message, system message,
+Assist/Copy wrapper, attitude variant, and named character anchor from data/manifest.json.
+52 conditions per subject; 156 unique greedy O-lens sites; the identical 39 site keys
+and seeds 1701..1705 from the Qwen control map (195 samples). No outcome-based selection.
+Subjects: meta-llama/Llama-3.1-70B and allenai/Llama-3.1-Tulu-3-70B.
+Both use the Tulu tokenizer/template, as in the paired lens training, so their input
+IDs match. A base model has no native chat template: this is a controlled Tulu-format
+comparison, not a claim about base-model behavior under raw natural text.
+
+Model-dependent differences, stated explicitly:
+- Qwen input to zero-based block 45 is after 45/64 blocks. The nearest supported
+  relative-depth Llama lens is L56, after 56/80 blocks (zero-based block 55 output).
+- Use each lens's trained native AO prompt and normalized input-embedding injection
+  (alpha=16000), not Qwen's residual-overwrite method. Copying the Qwen injection into
+  a differently trained lens would be invalid.
+- Subjects BF16; oracle uses its released FP8 frozen backbone and RL adapter.
+- No matching trained J++ lenses are supplied for these subjects. J++ remains available
+  only under Qwen; no substituted logit lens is called J++.
+- Source-token IDs differ from Qwen, but each selected token must end at precisely
+  the same source-character boundary. User-approved exact-prefix tokenization: tokenize and capture each prefix separately,
+  ending at the exact source-character boundary. Full-template tokenization can merge
+  final punctuation with the following newline; do not include that newline. Save both
+  full-template IDs and each prefix's IDs and flag differences. Actual replies still
+  use the full native chat prompt. This is an explicit deviation from full-prompt capture.
+
+O-lens decoding: K=10, N=8, max_new_tokens=256. Greedy is unselected argmax.
+Samples: temperature=.7, top_p=.9, no top-k restriction; each seed reset per site.
+Bypass native best-of-eight / FVE selection, NNLS sorting, and phrase truncation.
+Preserve original generated token IDs, raw text and every nonempty output line in
+original order, including extras/malformed phrases. Keep length and truncation flags.
+Source replies: greedy, max_new_tokens=256, native stops, no invented thinking mode.
+
+Validation before accepting study outputs:
+- CPU anchor and identical base/Tulu token-ID checks; freeze source/model/code/adapter hashes.
+- All 26 factual-pair shared-prefix activation checks (relative L2 < .01).
+- Check prefix causality by appending tokens to the exact-prefix IDs; all finite.
+- Original three calibration strings, expected-topic hits >=2/3 and distinct from
+  no-injection prior. Failure stops; retain all evidence, do not change prompt afterward.
+- Native greedy generator parity for a canary; explicit top-p implementation.
+- Paired and unrelated controls: same preselected site map as Qwen, identical decoder
+  prompt within each model; no-injection prior saved. These calibrate plumbing, not fidelity.
+
+Classification: exact frozen analysis/broad-perspective-prompt.txt and pinned
+GPT-5.4-2026-03-05, exhaustive per-phrase User/Assistant booleans. Source prefix only;
+opaque identifiers; exclude model name, main/control, paired outputs and prior labels.
+Preserve automated decisions. Review all 52 final-request greedy readouts per model
+and inspect factual/appraisal contrasts and seed variability. Record corrections
+with phrase-level reasons separately; never silently overwrite machine labels.
+Do not present noisy readout content or automated classifications as internal-state truth.
+
+Dashboard: model selector, same condition/anchor controls. Completely separate datasets,
+status, calibration and labels; missing data remains pending. Base/Tulu use O-lens only.
+Aggregate analysis must use each model's own broad labels and equal per-readout weighting,
+including first-ten sensitivity, matched Assist/Copy contrasts, factual controls, and
+seed stability. No cross-model FVE scale comparisons.
+
+Runtime: newly confirmed reservation required; never infer reservation from idle GPUs.
+Detached per-model worker; atomic checkpoints; STOP checked between units; no automatic
+resume after reservation expiry or failed validation. No interference with existing jobs.
