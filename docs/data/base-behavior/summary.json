@@ -1,0 +1,18 @@
+{
+  "assist": {
+    "n": 26,
+    "role_headers": 24,
+    "first_segment_exact_copy": 0,
+    "full_exact_copy": 0,
+    "truncated": 26,
+    "complete_new_user_turn": 14
+  },
+  "copy": {
+    "n": 26,
+    "role_headers": 23,
+    "first_segment_exact_copy": 4,
+    "full_exact_copy": 0,
+    "truncated": 26,
+    "complete_new_user_turn": 8
+  }
+}
