@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "run_id": "assistant-jspace-llama-20261016-llama-base",
+  "run_id": "assistant-jspace-llama-20261016-v2-llama-base",
   "system": "You are an AI assistant.",
   "model": "meta-llama/Llama-3.1-70B",
   "model_revision": "349b2ddb53ce8f2849a6c168a81980ab25258dac",
@@ -1286,5 +1286,6 @@
   "replication_protocol": "replication/PROTOCOL.txt",
   "oracle_adapter_sha256": "74edd127ff7ce369d2980e7e63fdf3a75789a25de96064cc6cc2b6180c9cf3d8",
   "source_manifest_sha256": "17ae2080e3c77a6d201747682e6cd146ad179e325f047d942c87cc158caac9a3",
-  "exact_prefix_tokenization": true
+  "exact_prefix_tokenization": true,
+  "validation_revision": "v2: fixed-shape causal tests; separate activation and decoding sensitivity"
 }

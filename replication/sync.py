@@ -3,9 +3,9 @@ import json,subprocess,sys
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]
 SSH='ssh -o BatchMode=yes -o ConnectTimeout=15 -o HostKeyAlias=athena02.ig32s.ruhr-uni-bochum.de'
-remote='agastyas@10.147.189.41:/data/agastyas/assistant-jspace-llama-20261016/'
+remote='agastyas@10.147.189.41:/data/agastyas/assistant-jspace-llama-20261016-v2/'
 for key in ['llama-base','tulu']:
- local=R/'local/llama-results'/key;local.mkdir(parents=True,exist_ok=True)
+ local=R/'local/llama-results-v2'/key;local.mkdir(parents=True,exist_ok=True)
  subprocess.run(['rsync','-az','-e',SSH,'--include=*/','--include=*.json','--exclude=*',remote+key+'/',str(local)+'/'],check=True)
  manifest=R/'replication'/(key+'-manifest.json');m=json.loads(manifest.read_text());p=local/'assets/provenance.json'
  if p.exists():

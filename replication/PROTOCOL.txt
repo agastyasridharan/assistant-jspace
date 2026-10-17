@@ -34,8 +34,15 @@ Source replies: greedy, max_new_tokens=256, native stops, no invented thinking m
 
 Validation before accepting study outputs:
 - CPU anchor and identical base/Tulu token-ID checks; freeze source/model/code/adapter hashes.
-- All 26 factual-pair shared-prefix activation checks (relative L2 < .01).
-- Check prefix causality by appending tokens to the exact-prefix IDs; all finite.
+- All 26 factual-pair shared-prefix checks use equal total sequence lengths
+  (right-pad the shorter sequence after the common prefix), requiring exact equality.
+- At all 164 named anchors, require exact identical-input repeatability and exact
+  equality when substituting future-token content at fixed sequence length.
+- Separately measure relative L2 when appending tokens changes sequence length;
+  do not interpret that numerical-shape sensitivity as failure of causal masking.
+  Decode the changed-length activation at all 156 greedy sites and report lexical
+  sensitivity separately, outside the 351 primary readouts and classifications.
+  This does not by itself establish semantic or classification stability. All finite.
 - Original three calibration strings, expected-topic hits >=2/3 and distinct from
   no-injection prior. Failure stops; retain all evidence, do not change prompt afterward.
 - Native greedy generator parity for a canary; explicit top-p implementation.
@@ -59,3 +66,11 @@ seed stability. No cross-model FVE scale comparisons.
 Runtime: newly confirmed reservation required; never infer reservation from idle GPUs.
 Detached per-model worker; atomic checkpoints; STOP checked between units; no automatic
 resume after reservation expiry or failed validation. No interference with existing jobs.
+
+Validation amendment (2026-10-16, user authorized): v1 remains preserved.
+On the failing example in both models, repeated inputs and same-length future
+substitutions were exactly identical; holding linear shapes fixed eliminated the
+append discrepancy with the original attention backend. The v2 run recaptures all
+records from scratch with unchanged primary capture/decoding, replacing the
+conflated 1% causal/numerical gate with the separate checks above. No trained
+weights, original model implementation, or Qwen outputs are modified.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "run_id": "assistant-jspace-llama-20261016-tulu",
+  "run_id": "assistant-jspace-llama-20261016-v2-tulu",
   "system": "You are an AI assistant.",
   "model": "allenai/Llama-3.1-Tulu-3-70B",
   "model_revision": "cfc1d855e534a0b9b82a9cea6bf9e8dda30b10d7",
@@ -1286,5 +1286,6 @@
   "replication_protocol": "replication/PROTOCOL.txt",
   "oracle_adapter_sha256": "5f625fbfa6b8f87d725c7389db76488b07ac46bff385971f596df24f1c228fab",
   "source_manifest_sha256": "17ae2080e3c77a6d201747682e6cd146ad179e325f047d942c87cc158caac9a3",
-  "exact_prefix_tokenization": true
+  "exact_prefix_tokenization": true,
+  "validation_revision": "v2: fixed-shape causal tests; separate activation and decoding sensitivity"
 }

@@ -1,0 +1,239 @@
+{
+  "record": "confidentiality-stated-copy-1",
+  "anchor": "request",
+  "prefix_length": 72,
+  "extension": [
+    24086,
+    2317,
+    13
+  ],
+  "model": "allenai/Llama-3.1-Tulu-3-70B",
+  "torch": "2.13.0+cu130",
+  "tests": {
+    "identical_input_repeat": {
+      "1": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000003576278687
+      },
+      "8": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000017881393433
+      },
+      "16": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000020265579224
+      },
+      "28": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000002384185791
+      },
+      "40": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000016689300537
+      },
+      "56": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000009536743164
+      }
+    },
+    "default_append": {
+      "1": {
+        "relative_l2": 0.0018581616459414363,
+        "equal": false,
+        "cosine": 0.9999986886978149
+      },
+      "8": {
+        "relative_l2": 0.007478903513401747,
+        "equal": false,
+        "cosine": 0.999973714351654
+      },
+      "16": {
+        "relative_l2": 0.010974063538014889,
+        "equal": false,
+        "cosine": 0.9999417662620544
+      },
+      "28": {
+        "relative_l2": 0.013331561349332333,
+        "equal": false,
+        "cosine": 0.9999135136604309
+      },
+      "40": {
+        "relative_l2": 0.014727914705872536,
+        "equal": false,
+        "cosine": 0.9998953342437744
+      },
+      "56": {
+        "relative_l2": 0.01692604087293148,
+        "equal": false,
+        "cosine": 0.9998584985733032
+      }
+    },
+    "same_length_future_substitution": {
+      "1": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000000238418579
+      },
+      "8": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000015497207642
+      },
+      "16": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000017881393433
+      },
+      "28": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000002384185791
+      },
+      "40": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000015497207642
+      },
+      "56": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000001072883606
+      }
+    },
+    "fp32_math_attention_append": {
+      "1": {
+        "relative_l2": 0.0008685907232575119,
+        "equal": false,
+        "cosine": 1.0
+      },
+      "8": {
+        "relative_l2": 0.007211839314550161,
+        "equal": false,
+        "cosine": 0.9999756813049316
+      },
+      "16": {
+        "relative_l2": 0.010860808193683624,
+        "equal": false,
+        "cosine": 0.9999428987503052
+      },
+      "28": {
+        "relative_l2": 0.012723878026008606,
+        "equal": false,
+        "cosine": 0.999921977519989
+      },
+      "40": {
+        "relative_l2": 0.015672367066144943,
+        "equal": false,
+        "cosine": 0.9998807311058044
+      },
+      "56": {
+        "relative_l2": 0.01753896102309227,
+        "equal": false,
+        "cosine": 0.9998476505279541
+      }
+    },
+    "attention_backend_difference": {
+      "1": {
+        "relative_l2": 0.0018661785870790482,
+        "equal": false,
+        "cosine": 0.9999986290931702
+      },
+      "8": {
+        "relative_l2": 0.008209834806621075,
+        "equal": false,
+        "cosine": 0.9999679327011108
+      },
+      "16": {
+        "relative_l2": 0.011864312924444675,
+        "equal": false,
+        "cosine": 0.9999315142631531
+      },
+      "28": {
+        "relative_l2": 0.013363688252866268,
+        "equal": false,
+        "cosine": 0.9999144673347473
+      },
+      "40": {
+        "relative_l2": 0.015999771654605865,
+        "equal": false,
+        "cosine": 0.9998740553855896
+      },
+      "56": {
+        "relative_l2": 0.016811799257993698,
+        "equal": false,
+        "cosine": 0.9998608827590942
+      }
+    },
+    "fixed_linear_shapes_math_attention_append": {
+      "1": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000003576278687
+      },
+      "8": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000017881393433
+      },
+      "16": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000017881393433
+      },
+      "28": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000022649765015
+      },
+      "40": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000016689300537
+      },
+      "56": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000001072883606
+      }
+    },
+    "fixed_linear_shapes_default_attention_append": {
+      "1": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000000238418579
+      },
+      "8": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000015497207642
+      },
+      "16": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000017881393433
+      },
+      "28": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000002384185791
+      },
+      "40": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.0000015497207642
+      },
+      "56": {
+        "relative_l2": 0.0,
+        "equal": true,
+        "cosine": 1.000001072883606
+      }
+    }
+  },
+  "completed_at": 1792196167.8798475
+}

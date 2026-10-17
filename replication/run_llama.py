@@ -6,7 +6,7 @@ from safetensors.torch import load_file
 from olens import config as C, data as D, llama as LM, oracle as O
 ap=argparse.ArgumentParser();ap.add_argument('stage',choices=['prepare','capture','oracle']);ap.add_argument('--run',required=True);ap.add_argument('--inputs',required=True);args=ap.parse_args()
 ROOT=Path(args.run);IN=Path(args.inputs);ROOT.mkdir(parents=True,exist_ok=True)
-for d in ['assets','records','activations','oracle','checks']:(ROOT/d).mkdir(exist_ok=True)
+for d in ['assets','records','activations','oracle','checks','sensitivity']:(ROOT/d).mkdir(exist_ok=True)
 M=json.loads((IN/'manifest.json').read_text());MAP=json.loads((IN/'qwen-sites.json').read_text());L=56
 def digest(p):
  h=hashlib.sha256()
@@ -80,7 +80,7 @@ def capture():
  gate();p=verify_provenance();enc={r['id']:r for r in json.loads((ROOT/'assets/tokenization.json').read_text())}
  status('loading_subject');model=LM.load_model(p['model_path'],'dense',devices=['cuda:0','cuda:1'],head=True)
  def act(ids,positions):
-  x=torch.tensor([ids],device=model.dev0);_,caps=model.forward_blocks(model.embed(x),capture=({L},torch.tensor(positions)));v=caps[L].detach().float();assert torch.isfinite(v).all();return v.cpu()
+  x=torch.tensor([ids],device=model.dev0);_,caps=model.forward_blocks(model.embed(x),end=L,capture=({L},torch.tensor(positions)));v=caps[L].detach().float();assert torch.isfinite(v).all();return v.cpu()
  canaries=['The capital of France is','The mitochondria is known as the powerhouse of the','For a classic margarita, combine tequila, lime juice and a splash of']
  for i,text in enumerate(canaries):
   gate();ids=tok.encode(text,add_special_tokens=False);save_tensor(ROOT/f'activations/canary-{i}.pt',act(ids,[-1])[0])
@@ -90,22 +90,36 @@ def capture():
   pair=M['records'][i:i+2];cp=ROOT/'checks'/(pair[0]['pair_id']+'.json')
   if not cp.exists():
    gate();aa,bb=[enc[r['id']]['input_ids'] for r in pair];common=next((j for j,(a,b) in enumerate(zip(aa,bb)) if a!=b),min(len(aa),len(bb)))
-   a,b=act(aa,[common-1])[0],act(bb,[common-1])[0];rel=float((a-b).norm()/a.norm().clamp_min(1e-10));assert rel<.01,(pair[0]['pair_id'],rel)
-   save(cp,{'common_tokens':common,'relative_l2':rel,'layer':L})
+   # Match sequence lengths to hold numerical operation shapes fixed.
+   length=max(len(aa),len(bb));pad=tok.eos_token_id
+   a,b=act(aa+[pad]*(length-len(aa)),[common-1])[0],act(bb+[pad]*(length-len(bb)),[common-1])[0]
+   rel=float((a-b).norm()/a.norm().clamp_min(1e-10))
+   assert torch.equal(a,b),('Fixed-shape factual-pair causality',pair[0]['pair_id'],rel)
+   save(cp,{'common_tokens':common,'relative_l2':rel,'layer':L,'equal':True,'test':'same-length future-content substitution'})
   for r in pair:
    gate();dest=ROOT/'records'/(r['id']+'.json')
    if dest.exists():continue
    e=enc[r['id']];names=list(e['anchors']);positions=[e['anchors'][n]['position'] for n in names];status('capture',record=r['id'],completed=len(list((ROOT/'records').glob('*.json'))))
-   vectors={};rel=0.0
+   vectors={};extended={};checks={}
+   extension=tok.encode(' Additional context.',add_special_tokens=False)
+   alternative=[tok.encode(' hello',add_special_tokens=False)[0]]*len(extension)
    for n in names:
     gate();ai=e['anchors'][n]['prefix_input_ids'];v=act(ai,[-1])[0];vectors[n]=v.to(torch.bfloat16)
-   # Causal check under identical tokenization, with additional tokens after the anchor.
-   ai=e['anchors'][names[-1]]['prefix_input_ids'];extension=tok.encode(' Additional context.',add_special_tokens=False)
-   check=act(ai+extension,[len(ai)-1])[0];v=vectors[names[-1]].float();rel=float((v-check).norm()/v.norm().clamp_min(1e-10))
-   assert rel<.01,('Exact-prefix causal check',r['id'],rel)
+    repeat=act(ai,[-1])[0]
+    assert torch.equal(v,repeat),('Identical-input repeat',r['id'],n)
+    ext=act(ai+extension,[len(ai)-1])[0];alt=act(ai+alternative,[len(ai)-1])[0]
+    rel=float((v-ext).norm()/v.norm().clamp_min(1e-10))
+    causal_rel=float((ext-alt).norm()/ext.norm().clamp_min(1e-10))
+    assert torch.equal(ext,alt),('Fixed-shape prefix causality',r['id'],n,causal_rel)
+    extended[n]=ext.to(torch.bfloat16)
+    checks[n]={'repeat_equal':True,'future_content_equal':True,'future_content_relative_l2':causal_rel,'length_change_relative_l2':rel}
+   save(ROOT/'checks'/(r['id']+'-causality.json'),checks)
    save_tensor(ROOT/'activations'/(r['id']+'.pt'),vectors)
+   save_tensor(ROOT/'sensitivity'/(r['id']+'.pt'),extended)
+   rel=checks[names[-1]]['length_change_relative_l2']
    toks,lens=generate(model,model.embed(torch.tensor([e['input_ids']],device=model.dev0)));ids=toks[0,:lens[0]].tolist();reply=tok.decode([x for x in ids if x not in stops],skip_special_tokens=False)
    save(dest,dict(id=r['id'],anchors=e['anchors'],jpp={},reply=reply,reply_token_ids=ids,reply_truncated=len(ids)==256 and ids[-1] not in stops,copy_exact=reply.strip()==r['message'].strip(),prefix_relative_l2=rel,completed_at=time.time()))
+ save(ROOT/'checks/causality_summary.json',{'records':52,'anchors':sum(len(x['anchors']) for x in enc.values()),'paired_checks':26,'all_exact':True,'method':'Identical-input repeat and same-length future-content substitution; length-change sensitivity measured separately'})
  status('capture_complete',records=52)
 @torch.no_grad()
 def oracle():
@@ -129,6 +143,20 @@ def oracle():
     if dest.exists():continue
     status('oracle_samples' if sampling else 'oracle',site=key,completed=len(list((ROOT/'oracle').glob('*__seed*.json'))) if sampling else len([f for f in (ROOT/'oracle').glob('*.json') if '__seed' not in f.stem and f.stem!='no-injection']))
     save(dest,dict(**decode(vec,seed,sampling),**s))
+ # Decode the changed-length activation for every greedy site, keeping these
+ # diagnostics separate from the 351 study readouts and their classifications.
+ sensitivity=[]
+ for s in sites:
+  gate();dest=ROOT/'sensitivity'/(s['key']+'.json')
+  if not dest.exists():
+   status('oracle_sensitivity',site=s['key'],completed=len(sensitivity))
+   vec=torch.load(ROOT/'sensitivity'/(s['record_id']+'.pt'),weights_only=True)[s['anchor']]
+   save(dest,dict(**decode(vec),**s))
+  standard=json.loads((ROOT/'oracle'/(s['key']+'.json')).read_text());changed=json.loads(dest.read_text())
+  a,b=standard['token_ids'],changed['token_ids'];common=next((i for i,(x,y) in enumerate(zip(a,b)) if x!=y),min(len(a),len(b)))
+  aa,bb=set(standard['phrases']),set(changed['phrases'])
+  sensitivity.append({'site':s['key'],'identical_tokens':a==b,'common_token_prefix':common,'exact_phrase_jaccard':len(aa&bb)/max(1,len(aa|bb)),'standard_truncated':standard['truncated'],'changed_truncated':changed['truncated']})
+ save(ROOT/'checks/numerical_sensitivity.json',{'sites':sensitivity,'identical_readouts':sum(x['identical_tokens'] for x in sensitivity),'total':len(sensitivity),'note':'Lexical sensitivity only, not a semantic-fidelity or classification-stability measure; diagnostic outputs excluded from primary analysis.'})
  status('complete',records=52,oracle_sites=156,oracle_samples=195)
 try:
  {'prepare':prepare,'capture':capture,'oracle':oracle}[args.stage]()

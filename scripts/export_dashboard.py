@@ -57,7 +57,7 @@ def main():
             target.parent.mkdir(exist_ok=True)
             target.write_bytes(gzip.compress(t.read_bytes(),mtime=0))
     checks={}
-    for name in ['oracle_calibration','oracle_prompt','oracle_sites','environment']:
+    for name in ['oracle_calibration','oracle_prompt','oracle_sites','environment','causality_summary','numerical_sensitivity']:
         p=results/'checks'/f'{name}.json'
         if p.exists():checks[name]=json.loads(p.read_text())
     write(dest/'checks.json',checks)

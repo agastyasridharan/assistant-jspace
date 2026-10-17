@@ -2,7 +2,7 @@
 # Run only after a current reservation.json names this model's three GPU IDs and expiry.
 set -euo pipefail
 MODEL_KEY=$1
-RUN_ROOT=/data/agastyas/assistant-jspace-llama-20261016
+RUN_ROOT=/data/agastyas/assistant-jspace-llama-20261016-v2
 RUN=$RUN_ROOT/$MODEL_KEY
 cd /home/agastyas/olens_tulu70b
 source env.sh
