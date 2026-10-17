@@ -1,5 +1,5 @@
 """Export only study data, never environment variables, logs, or credentials."""
-import argparse,gzip,hashlib,json,time
+import argparse,gzip,hashlib,json,time,statistics
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -73,10 +73,20 @@ def main():
         oracle_sites=oracle_count,oracle_samples=sample_count,manifest_sha256=hashlib.sha256(Path(args.manifest).read_bytes()).hexdigest(),
         invariants_checked=len([p for p in (results/'checks').glob('*.json') if '-assist.' in p.name or '-copy.' in p.name]),
         expected_oracle_sites=len(checks.get('oracle_sites',[])) or None,issue=issue)
+    if (results/'sensitivity').exists():
+        anchor_checks=[a for f in (results/'checks').glob('*-causality.json') for a in json.loads(f.read_text()).values()]
+        shifts=[a['length_change_relative_l2'] for a in anchor_checks]
+        sensitivity_times=[json.loads(f.read_text())['completed_at'] for f in (results/'sensitivity').glob('*__*.json')]
+        summary['validation']={'anchors_checked':len(anchor_checks),'expected_anchors':164,
+            'all_checked_exact':all(a['repeat_equal'] and a['future_content_equal'] for a in anchor_checks),
+            'length_change_relative_l2_median':statistics.median(shifts) if shifts else None,
+            'length_change_relative_l2_max':max(shifts) if shifts else None,
+            'sensitivity_readouts':len(sensitivity_times),'expected_sensitivity_readouts':156}
     site_count=len(checks.get('oracle_sites',[]))
     summary['eta']=dict(capture=estimate(capture_times,52),
         oracle=estimate(oracle_times,site_count) if site_count else dict(state='unmeasured'),
         samples=estimate(sample_times,((site_count+3)//4)*5) if site_count else dict(state='unmeasured'))
+    if 'validation' in summary:summary['eta']['sensitivity']=estimate(sensitivity_times,156)
     if status['stage'] in ['failed','paused']:
         summary['eta']={'state':'unavailable','reason':status['stage']}
     write(dest/'summary.json',summary)
