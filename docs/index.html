@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet">
 <link href="style.css?v=e21d4112035e" rel="stylesheet"></head>
 <body>
-<header><h1>Assistant perspective <span id="subject-title">· Qwen3.6</span></h1><label class="model-switch">Model <select id="model"><option value="qwen">Qwen3.6-27B</option><option value="llama-base">Llama-3.1-70B · base</option><option value="tulu">Tulu-3-70B · post-trained</option></select></label><nav aria-label="Views"><button data-view="pairs" class="active">Pairs</button><button data-view="overview">Overview</button><button data-view="method">Method</button></nav><a id="analysis-link" href="analysis.html">Qwen analysis</a><a href="base-behavior.html">Base replies</a><span id="live">Connecting</span></header>
+<header><h1>Assistant perspective <span id="subject-title">· Qwen3.6</span></h1><label class="model-switch">Model <select id="model"><option value="qwen">Qwen3.6-27B</option><option value="llama-base">Llama-3.1-70B · base</option><option value="tulu">Tulu-3-70B · post-trained</option></select></label><nav aria-label="Views"><button data-view="pairs" class="active">Pairs</button><button data-view="overview">Overview</button><button data-view="method">Method</button></nav><a id="analysis-link" href="analysis.html">Qwen analysis</a><a href="base-behavior.html">Base behavior</a><span id="live">Connecting</span></header>
 <main>
 <div id="status" role="status">Loading run status…</div>
 <section id="pairs">
@@ -20,6 +20,7 @@
 <p class="hint">External check: Neuronpedia J++ agrees on the top token in 97.97% of 13,312 raw readouts (98.75% at anchors); mean top-eight overlap 98.25%. <a href="validation.html">Validation details</a>.</p>
 <div id="jpp"></div></div>
 <div class="readhead"><h2>Actual replies</h2><span class="hint">Generated after the complete request · greedy · 256-token cap</span></div>
+<p class="hint"><a href="base-behavior.html">Explore base-model behavior: full conversations and 1,024-token continuations</a></p>
 <div id="replies" class="comparison"></div>
 </section>
 <section id="overview" hidden><h2>All conditions</h2><p class="hint">Every condition is retained. These 52 configurations are a diagnostic pilot, not 52 independent scenarios.</p><div id="overview-table"></div></section>
