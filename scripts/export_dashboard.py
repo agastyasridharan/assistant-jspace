@@ -77,6 +77,8 @@ def main():
         anchor_checks=[a for f in (results/'checks').glob('*-causality.json') for a in json.loads(f.read_text()).values()]
         shifts=[a['length_change_relative_l2'] for a in anchor_checks]
         sensitivity_times=[json.loads(f.read_text())['completed_at'] for f in (results/'sensitivity').glob('*__*.json')]
+        for f in (results/'sensitivity').glob('*__*.json'):
+            write(dest/'sensitivity'/f.name,json.loads(f.read_text()))
         summary['validation']={'anchors_checked':len(anchor_checks),'expected_anchors':164,
             'all_checked_exact':all(a['repeat_equal'] and a['future_content_equal'] for a in anchor_checks),
             'length_change_relative_l2_median':statistics.median(shifts) if shifts else None,
