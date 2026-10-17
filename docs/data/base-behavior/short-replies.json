@@ -1,5 +1,7 @@
 [
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tylenol-stated-assist-0",
     "task": "assist",
     "family": "tylenol",
@@ -51,6 +53,8 @@
     "source_sha256": "8fe71ddfc091286465fcaa5da45fef6456436e9196b1a37c6310675759fd5d3c"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tylenol-stated-assist-1",
     "task": "assist",
     "family": "tylenol",
@@ -108,6 +112,8 @@
     "source_sha256": "24d8b7d9f8aa7b2085205e8c4ae308528fcfc417858e70a8168df961f3e99983"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tylenol-stated-copy-0",
     "task": "copy",
     "family": "tylenol",
@@ -147,6 +153,8 @@
     "source_sha256": "3f23b038b28652f4c328f57275320ef1e20c34f242f5b89bf5b09d9d933ed213"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tylenol-stated-copy-1",
     "task": "copy",
     "family": "tylenol",
@@ -186,6 +194,8 @@
     "source_sha256": "b2953ab7aa47a4c5b6a4a40cb6a80e494692005289016eca30cb822bbfec8463"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "confidentiality-stated-assist-0",
     "task": "assist",
     "family": "confidentiality",
@@ -255,6 +265,8 @@
     "source_sha256": "0ee8415948b5e825838aebd0333420e9862375b4a0c0275687fdaa02278c0a80"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "confidentiality-stated-assist-1",
     "task": "assist",
     "family": "confidentiality",
@@ -324,6 +336,8 @@
     "source_sha256": "01ea56d7a5099594f96d47e81d2c16558c35b25fd458d71a56db61d9a43c6fe7"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "confidentiality-stated-copy-0",
     "task": "copy",
     "family": "confidentiality",
@@ -351,6 +365,8 @@
     "source_sha256": "bae284d2cf355bcf68543d6afa618305caa4639062a71e3a9316d0e0cf74cd9b"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "confidentiality-stated-copy-1",
     "task": "copy",
     "family": "confidentiality",
@@ -365,6 +381,8 @@
     "source_sha256": "e9aadb58a3ba218d6d0c38f6b5644611b02ee59a4d01f2f2a44e2cfdfc82aaff"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-stated-assist-0",
     "task": "assist",
     "family": "tutoring",
@@ -404,6 +422,8 @@
     "source_sha256": "8166bceca52d39a252a73b68af5f1a244c888e7553c7b932acda17690879033c"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-stated-assist-1",
     "task": "assist",
     "family": "tutoring",
@@ -461,6 +481,8 @@
     "source_sha256": "fe419075683fb00adbf26992578bb19b50e3bcc9a408f4248a14f05aad3086c7"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-stated-copy-0",
     "task": "copy",
     "family": "tutoring",
@@ -488,6 +510,8 @@
     "source_sha256": "569a45e68eeaedfd5b9510365521e7b3895f7004448d468a747dc5f7c37d3524"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-stated-copy-1",
     "task": "copy",
     "family": "tutoring",
@@ -509,6 +533,8 @@
     "source_sha256": "807e0d2e1e122127909c2801d228a42d145bb16a0f22a63b3c58209f4e18c62d"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-crossed-assist-0",
     "task": "assist",
     "family": "tutoring",
@@ -566,6 +592,8 @@
     "source_sha256": "2da9c6ddc95e03095e773d3d3a6833865e45a4c467de95ab3faf0e8d65cbc534"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-crossed-assist-1",
     "task": "assist",
     "family": "tutoring",
@@ -580,6 +608,8 @@
     "source_sha256": "f199503569bd0c1e977af4541dd28c9aca513a3f72708cbe6d8ee66878e6a46a"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-crossed-copy-0",
     "task": "copy",
     "family": "tutoring",
@@ -607,6 +637,8 @@
     "source_sha256": "b691110170dd3946c96decdc2c2729ff80870a0db16b3d64271c039bc7fedd39"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tutoring-crossed-copy-1",
     "task": "copy",
     "family": "tutoring",
@@ -670,6 +702,8 @@
     "source_sha256": "880a46b01934b59edd198990fa4bdee003dcb9576be12accd3b64f4ac5f47ff1"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-stated-assist-0",
     "task": "assist",
     "family": "arithmetic",
@@ -721,6 +755,8 @@
     "source_sha256": "212ff26100d9a40b272170f7277c39116212e5ac6104bb2781745c4d133115f1"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-stated-assist-1",
     "task": "assist",
     "family": "arithmetic",
@@ -784,6 +820,8 @@
     "source_sha256": "4ceb40a986f3aa514b5c86e5d7fc8fc9d13f6a831f94dc7131b6ee09d38258f5"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-stated-copy-0",
     "task": "copy",
     "family": "arithmetic",
@@ -798,6 +836,8 @@
     "source_sha256": "72ac9ac7dec9ee05d14ebe739f351ede05328c1132c650dee7713b5c8588a918"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-stated-copy-1",
     "task": "copy",
     "family": "arithmetic",
@@ -812,6 +852,8 @@
     "source_sha256": "c76aeb97c53126664650588d528e98da981641ad1e7c34f003a53eafab3ba903"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-crossed-assist-0",
     "task": "assist",
     "family": "arithmetic",
@@ -881,6 +923,8 @@
     "source_sha256": "37a139618e2f1e4e116a10c7a984134872300223f665f47ee1d7e931e6e48589"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-crossed-assist-1",
     "task": "assist",
     "family": "arithmetic",
@@ -950,6 +994,8 @@
     "source_sha256": "74afd07c8fc0d49447b0bae18dfa4289ceabb75ee939c69a3439ad64075a13c8"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-crossed-copy-0",
     "task": "copy",
     "family": "arithmetic",
@@ -995,6 +1041,8 @@
     "source_sha256": "29afeb373ff3fc806fd5b927d0b0aca135881b7b3216e9d9a2bf9547ea1ef631"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "arithmetic-crossed-copy-1",
     "task": "copy",
     "family": "arithmetic",
@@ -1040,6 +1088,8 @@
     "source_sha256": "0bc3ae874ed91543b0c831ec3f44033cf72d42f140ab01c822f04eb9d46a90d6"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tests-stated-assist-0",
     "task": "assist",
     "family": "tests",
@@ -1109,6 +1159,8 @@
     "source_sha256": "380f6e43b0797887a957138c9f2d4a876a62a9428ed19e1b60a950c3620f5997"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tests-stated-assist-1",
     "task": "assist",
     "family": "tests",
@@ -1196,6 +1248,8 @@
     "source_sha256": "385c0a9127cb8f5a4bc43144fb4d63648b818e5d4945bc388fd668cb0bf1ef61"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tests-stated-copy-0",
     "task": "copy",
     "family": "tests",
@@ -1241,6 +1295,8 @@
     "source_sha256": "7c93a494b3040174b3a299038be00510cf5480c8843795c83a04ba2accb2d21c"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "tests-stated-copy-1",
     "task": "copy",
     "family": "tests",
@@ -1304,6 +1360,8 @@
     "source_sha256": "d0450dc00fba239f8591dd1c877ff0710719f5e96144be460256a205a35ea6cf"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "scheduling-stated-assist-0",
     "task": "assist",
     "family": "scheduling",
@@ -1355,6 +1413,8 @@
     "source_sha256": "2255815a10bd9c5ab1c7e2ea1ab18554013bc5d1986826ab0949681749d630a4"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "scheduling-stated-assist-1",
     "task": "assist",
     "family": "scheduling",
@@ -1424,6 +1484,8 @@
     "source_sha256": "cd130e994ca5ae37575ab4f748027a143a56f93810d50cc0784f5bf947af70bd"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "scheduling-stated-copy-0",
     "task": "copy",
     "family": "scheduling",
@@ -1469,6 +1531,8 @@
     "source_sha256": "85a01d0ebc18a4d12e56e607a99772f1c2510c3734c1086454df13f3456e01e7"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "scheduling-stated-copy-1",
     "task": "copy",
     "family": "scheduling",
@@ -1502,6 +1566,8 @@
     "source_sha256": "b8e30edfed3362e059ec6c104b93869ffbdea98513ad9a0b3c877e40c95a73ca"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "booking-stated-assist-0",
     "task": "assist",
     "family": "booking",
@@ -1535,6 +1601,8 @@
     "source_sha256": "d4e2cb4caa580f32b372f28a51366ddb3b88982bf8404a7d0fc677358f150418"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "booking-stated-assist-1",
     "task": "assist",
     "family": "booking",
@@ -1586,6 +1654,8 @@
     "source_sha256": "1c616c802c2afd66a46f9b42a571c55f4aaf3e47aea48a7c26c7a407d154e103"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "booking-stated-copy-0",
     "task": "copy",
     "family": "booking",
@@ -1613,6 +1683,8 @@
     "source_sha256": "1f9e693590301ae893d956d9e9b3d03077a48067bd773755a7232740aeba5ddd"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "booking-stated-copy-1",
     "task": "copy",
     "family": "booking",
@@ -1652,6 +1724,8 @@
     "source_sha256": "59cd2ce40561ba51e015491d74d5f0c54eaed68e7bbdce7636b67021d2124e31"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "blame-stated-assist-0",
     "task": "assist",
     "family": "blame",
@@ -1679,6 +1753,8 @@
     "source_sha256": "c2ab54ca87ff26b35dcad1663a547e2adef12e505182196936afd753daef5aaa"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "blame-stated-assist-1",
     "task": "assist",
     "family": "blame",
@@ -1742,6 +1818,8 @@
     "source_sha256": "0c185b05461fc190241b696749f2b3d49cfec59cb923c7f349d0d7a4e05f6211"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "blame-stated-copy-0",
     "task": "copy",
     "family": "blame",
@@ -1799,6 +1877,8 @@
     "source_sha256": "fd568607742cbbc7a3f339392c99b84d0255cd8f8ddb05c89e6539ac1f522b76"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "blame-stated-copy-1",
     "task": "copy",
     "family": "blame",
@@ -1856,6 +1936,8 @@
     "source_sha256": "be80b2611cc80adcf1bbcc4e9ea9d71335ca2a4b49fb6addb1a109f32ddee84d"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "bereavement-stated-assist-0",
     "task": "assist",
     "family": "bereavement",
@@ -1883,6 +1965,8 @@
     "source_sha256": "423fb64a22507420c92bc79ab2a4a8c1cfe2b6191ebf05f93e40d7d08e5e30dd"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "bereavement-stated-assist-1",
     "task": "assist",
     "family": "bereavement",
@@ -1916,6 +2000,8 @@
     "source_sha256": "df94d927879524db518841397bec700b58606c054f958ecfaa74f3d0a48744fa"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "bereavement-stated-copy-0",
     "task": "copy",
     "family": "bereavement",
@@ -1937,6 +2023,8 @@
     "source_sha256": "c3334a0bc25253799b3f0cb7a635fb6f3f60e9bd93c3f57eaaeb3e85e0433711"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "bereavement-stated-copy-1",
     "task": "copy",
     "family": "bereavement",
@@ -1988,6 +2076,8 @@
     "source_sha256": "934e742b011bd1e755bdabf772f21db4f0965f9ab1093f8adab99e6d54c0e39d"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-stated-assist-0",
     "task": "assist",
     "family": "frustration",
@@ -2021,6 +2111,8 @@
     "source_sha256": "7f2cfb96b4da904bc332d76a5a291c114d282f96379a140841133a7f43a6f8a1"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-stated-assist-1",
     "task": "assist",
     "family": "frustration",
@@ -2060,6 +2152,8 @@
     "source_sha256": "03586071d2cd2fb38c014efc56af47d9320418ce579ab9a0bb0d3fde5bec9b86"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-stated-copy-0",
     "task": "copy",
     "family": "frustration",
@@ -2111,6 +2205,8 @@
     "source_sha256": "1a454a3f69d0122d8e31573c997a32f603950c575c45ed60150c0b0ac82d365a"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-stated-copy-1",
     "task": "copy",
     "family": "frustration",
@@ -2162,6 +2258,8 @@
     "source_sha256": "18845d8af83b096b2ae956aa9a737808d7edae5aef465ed95bab5509eea40ac8"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-crossed-assist-0",
     "task": "assist",
     "family": "frustration",
@@ -2176,6 +2274,8 @@
     "source_sha256": "e3d11d02474f769d1ca1e618debe8de46ed6f97d210851ec502fd245e25c5107"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-crossed-assist-1",
     "task": "assist",
     "family": "frustration",
@@ -2227,6 +2327,8 @@
     "source_sha256": "cfa3e46059b7976bf8a01b736e7be785f1944db91faab6250e2ceaee4caafa11"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-crossed-copy-0",
     "task": "copy",
     "family": "frustration",
@@ -2278,6 +2380,8 @@
     "source_sha256": "72e6c2d5eb23b9b173845b93feb078622d8bd289c25708cd0669190e36e1c8cb"
   },
   {
+    "prefix_matches_original": null,
+    "generated_tokens": 256,
     "id": "frustration-crossed-copy-1",
     "task": "copy",
     "family": "frustration",
