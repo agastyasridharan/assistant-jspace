@@ -1,0 +1,13 @@
+{
+  "model": [
+    "gpt-5.4-2026-03-05"
+  ],
+  "prompt_sha256": "8ceabf4b97fb66c973c5c3dc9a90366d6930c4b044adb9450178d900c2f05d65",
+  "source_sha256": "b1f195ae32b5f067f17f0216d5b486f6a039d0145a8ee0666c85fb6b7d8ea175",
+  "readouts": 351,
+  "phrases": 3510,
+  "created_at": 1792217884.411961,
+  "status": "Automated exhaustive annotation; all final-request greedy readouts reviewed by Codex, with separate corrections",
+  "prior_analysis": "Same frozen broad rubric as Qwen; all original Qwen labels preserved",
+  "review": "request-review.json"
+}

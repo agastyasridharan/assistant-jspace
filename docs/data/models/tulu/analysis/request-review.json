@@ -1,0 +1,208 @@
+{
+  "reviewer": "Codex assistant; not a human review or independent blinded annotator",
+  "scope": "All 52 final-request greedy readouts, all 520 phrases, read with source prefixes and automated labels. Other anchors and samples are not exhaustively reviewed.",
+  "created_at": 1792218589.9257898,
+  "source_sha256": "b1f195ae32b5f067f17f0216d5b486f6a039d0145a8ee0666c85fb6b7d8ea175",
+  "automated_labels_sha256": "d230e7ca9125eeef40b2ca2469f7d8abfbf94cc20014e4a2c289e571d22598fd",
+  "reviewed_sources": [
+    "arithmetic-crossed-assist-0__request",
+    "arithmetic-crossed-assist-1__request",
+    "arithmetic-crossed-copy-0__request",
+    "arithmetic-crossed-copy-1__request",
+    "arithmetic-stated-assist-0__request",
+    "arithmetic-stated-assist-1__request",
+    "arithmetic-stated-copy-0__request",
+    "arithmetic-stated-copy-1__request",
+    "bereavement-stated-assist-0__request",
+    "bereavement-stated-assist-1__request",
+    "bereavement-stated-copy-0__request",
+    "bereavement-stated-copy-1__request",
+    "blame-stated-assist-0__request",
+    "blame-stated-assist-1__request",
+    "blame-stated-copy-0__request",
+    "blame-stated-copy-1__request",
+    "booking-stated-assist-0__request",
+    "booking-stated-assist-1__request",
+    "booking-stated-copy-0__request",
+    "booking-stated-copy-1__request",
+    "confidentiality-stated-assist-0__request",
+    "confidentiality-stated-assist-1__request",
+    "confidentiality-stated-copy-0__request",
+    "confidentiality-stated-copy-1__request",
+    "frustration-crossed-assist-0__request",
+    "frustration-crossed-assist-1__request",
+    "frustration-crossed-copy-0__request",
+    "frustration-crossed-copy-1__request",
+    "frustration-stated-assist-0__request",
+    "frustration-stated-assist-1__request",
+    "frustration-stated-copy-0__request",
+    "frustration-stated-copy-1__request",
+    "scheduling-stated-assist-0__request",
+    "scheduling-stated-assist-1__request",
+    "scheduling-stated-copy-0__request",
+    "scheduling-stated-copy-1__request",
+    "tests-stated-assist-0__request",
+    "tests-stated-assist-1__request",
+    "tests-stated-copy-0__request",
+    "tests-stated-copy-1__request",
+    "tutoring-crossed-assist-0__request",
+    "tutoring-crossed-assist-1__request",
+    "tutoring-crossed-copy-0__request",
+    "tutoring-crossed-copy-1__request",
+    "tutoring-stated-assist-0__request",
+    "tutoring-stated-assist-1__request",
+    "tutoring-stated-copy-0__request",
+    "tutoring-stated-copy-1__request",
+    "tylenol-stated-assist-0__request",
+    "tylenol-stated-assist-1__request",
+    "tylenol-stated-copy-0__request",
+    "tylenol-stated-copy-1__request"
+  ],
+  "corrections": [
+    {
+      "source": "arithmetic-stated-copy-0__request",
+      "index": 2,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "arithmetic-stated-copy-0__request",
+      "index": 7,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Repeated unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "arithmetic-stated-copy-1__request",
+      "index": 3,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "arithmetic-stated-copy-1__request",
+      "index": 10,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Repeated unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "bereavement-stated-copy-0__request",
+      "index": 10,
+      "phrase": " Should they seek to conquer these lands,",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Third-party conquest fragment has no clear connection to focal user or helper; paired control leaves it unlabeled."
+    },
+    {
+      "source": "blame-stated-copy-0__request",
+      "index": 6,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "blame-stated-copy-0__request",
+      "index": 2,
+      "phrase": " How do I correct it?↵↵**Answer",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": true,
+        "assistant": true
+      },
+      "reason": "User question followed by Answer heading; preserve both components consistently with identical phrase in paired control."
+    },
+    {
+      "source": "frustration-stated-assist-1__request",
+      "index": 8,
+      "phrase": " and why.↵↵### 1. What",
+      "before": {
+        "user": true,
+        "assistant": true
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "and why followed by a generic numbered heading does not specify user state or helper response; identical phrase in paired main is unassigned."
+    },
+    {
+      "source": "frustration-stated-copy-1__request",
+      "index": 4,
+      "phrase": " Why was the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "tutoring-stated-copy-0__request",
+      "index": 7,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    }
+  ],
+  "limitations": [
+    "Many decoded phrases are request continuations, generic answer scaffolding, or unrelated fragments. Broad attribution is not evidence of factual fidelity or a specific psychological state.",
+    "Ambiguous ownership remains in greetings, draft-email fragments, generic clarification questions, and answer headings. The review does not eliminate classifier uncertainty.",
+    "Original automated labels remain unchanged and are the primary comparable analysis; correction sensitivity is reported separately."
+  ]
+}

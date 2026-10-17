@@ -1,0 +1,1883 @@
+{
+  "qwen": {
+    "request": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 51,
+        "both": 51,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.7183367801788854,
+        "assistant": 0.3332768839347788
+      }
+    },
+    "request_first10": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 47,
+        "both": 47,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.7557692307692303,
+        "assistant": 0.29615384615384616
+      }
+    },
+    "request_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 25,
+          "both": 25,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7156962920120815,
+          "assistant": 0.3453618019407493
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 26,
+          "both": 26,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7209772683456895,
+          "assistant": 0.3211919659288081
+        }
+      }
+    },
+    "request_first10_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 23,
+          "both": 23,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7692307692307693,
+          "assistant": 0.3
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 24,
+          "both": 24,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7423076923076924,
+          "assistant": 0.2923076923076923
+        }
+      }
+    },
+    "request_by_family": {
+      "arithmetic": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 7,
+          "both": 7,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7715852130325814,
+          "assistant": 0.18189223057644108
+        }
+      },
+      "bereavement": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6835526315789473,
+          "assistant": 0.33092105263157895
+        }
+      },
+      "blame": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8046992481203007,
+          "assistant": 0.22030075187969925
+        }
+      },
+      "booking": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.5255952380952381,
+          "assistant": 0.45059523809523816
+        }
+      },
+      "confidentiality": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.5649122807017544,
+          "assistant": 0.6350877192982456
+        }
+      },
+      "frustration": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7203947368421053,
+          "assistant": 0.32960526315789473
+        }
+      },
+      "scheduling": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6402777777777777,
+          "assistant": 0.4444444444444444
+        }
+      },
+      "tests": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.724436090225564,
+          "assistant": 0.19661654135338347
+        }
+      },
+      "tutoring": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8486842105263157,
+          "assistant": 0.2332236842105263
+        }
+      },
+      "tylenol": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7135765550239235,
+          "assistant": 0.5651913875598086
+        }
+      }
+    },
+    "paired_request": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": -0.005280976333607929,
+        "positive": 13,
+        "negative": 11,
+        "ties": 2
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.02416983601194127,
+        "positive": 12,
+        "negative": 13,
+        "ties": 1
+      }
+    },
+    "paired_request_first10": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.026923076923076928,
+        "positive": 13,
+        "negative": 10,
+        "ties": 3
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.007692307692307692,
+        "positive": 11,
+        "negative": 12,
+        "ties": 3
+      }
+    },
+    "matched_anchors": {
+      "fact": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 22,
+            "both": 22,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.4125085440874915,
+            "assistant": 0.36573820915926175
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 20,
+            "both": 20,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.5471994379889116,
+            "assistant": 0.23313966735019365
+          }
+        }
+      },
+      "primary": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 21,
+            "both": 21,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7626725410363855,
+            "assistant": 0.4296417096760346
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 19,
+            "both": 19,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.8570574162679425,
+            "assistant": 0.1867224880382775
+          }
+        }
+      },
+      "request": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 21,
+            "both": 21,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7398420293157135,
+            "assistant": 0.3022936128199286
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 22,
+            "both": 22,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7255923900660743,
+            "assistant": 0.26721918432444747
+          }
+        }
+      }
+    },
+    "paired_matched_anchors": {
+      "fact": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.13469089390142022,
+          "positive": 3,
+          "negative": 19,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.1325985418090681,
+          "positive": 19,
+          "negative": 2,
+          "ties": 1
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.09438487523155714,
+          "positive": 5,
+          "negative": 16,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.24291922163775712,
+          "positive": 17,
+          "negative": 5,
+          "ties": 0
+        }
+      },
+      "request": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.014249639249639234,
+          "positive": 11,
+          "negative": 9,
+          "ties": 2
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.03507442849548112,
+          "positive": 10,
+          "negative": 11,
+          "ties": 1
+        }
+      }
+    },
+    "paired_primary_by_family": {
+      "arithmetic": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.02440476190476193,
+          "positive": 1,
+          "negative": 2,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.16976817042606518,
+          "positive": 3,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "bereavement": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.15000000000000002,
+          "positive": 0,
+          "negative": 2,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.024999999999999994,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "blame": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.1302631578947368,
+          "positive": 0,
+          "negative": 2,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.4255639097744361,
+          "positive": 2,
+          "negative": 0,
+          "ties": 0
+        }
+      },
+      "booking": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.02470760233918129,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.15014619883040936,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "frustration": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.13684210526315788,
+          "positive": 1,
+          "negative": 3,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.3125,
+          "positive": 4,
+          "negative": 0,
+          "ties": 0
+        }
+      },
+      "scheduling": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.003947368421052644,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.09473684210526317,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "tests": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.07065217391304346,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.09239130434782608,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "tutoring": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.19673976608187133,
+          "positive": 0,
+          "negative": 4,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.4598684210526316,
+          "positive": 4,
+          "negative": 0,
+          "ties": 0
+        }
+      }
+    },
+    "primary_equal_family_assistant_difference": 0.21624685581707892,
+    "primary_without_auxiliary": {
+      "user": {
+        "n": 16,
+        "mean_assist_minus_copy": -0.0768186771276016,
+        "positive": 4,
+        "negative": 11,
+        "ties": 1
+      },
+      "assistant": {
+        "n": 16,
+        "mean_assist_minus_copy": 0.252763929751916,
+        "positive": 12,
+        "negative": 4,
+        "ties": 0
+      }
+    },
+    "samples": {
+      "user": {
+        "presence_count_out_of_five_histogram": {
+          "1": 1,
+          "5": 38
+        },
+        "agreement_with_greedy": 194,
+        "comparisons": 195,
+        "median_density_range": 0.20000000000000007
+      },
+      "assistant": {
+        "presence_count_out_of_five_histogram": {
+          "1": 1,
+          "5": 38
+        },
+        "agreement_with_greedy": 189,
+        "comparisons": 195,
+        "median_density_range": 0.19169960474308304
+      }
+    },
+    "factual_pairs": {
+      "fact": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.04418096523359681,
+          "positive": 15,
+          "negative": 11,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": 0.1014893001735107,
+          "positive": 21,
+          "negative": 5,
+          "ties": 0
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 24,
+          "mean_main_minus_control": -0.030613036213722713,
+          "positive": 9,
+          "negative": 12,
+          "ties": 3
+        },
+        "assistant": {
+          "n": 24,
+          "mean_main_minus_control": 0.09778386182848425,
+          "positive": 13,
+          "negative": 5,
+          "ties": 6
+        }
+      },
+      "request": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.012873676031570766,
+          "positive": 14,
+          "negative": 11,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": -0.012027300185194921,
+          "positive": 12,
+          "negative": 12,
+          "ties": 2
+        }
+      }
+    },
+    "provenance": {
+      "readouts_sha256": "104b6e6cc0d890519ad26111300d031405dd4288d775623670fb489927bd145b",
+      "labels_sha256": "ec6a9e4fadf0ad37d93651d42408748d5ee8b1fed7f1917fe5b5858a639165c2",
+      "denominator": "52 final-request greedy readouts = 26 messages x 2 instructions; not 52 independent scenarios. Labels overlap. Phrase fractions equally weight readouts."
+    }
+  },
+  "llama-base": {
+    "request": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 50,
+        "both": 50,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.642307692307692,
+        "assistant": 0.27692307692307677
+      }
+    },
+    "request_first10": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 50,
+        "both": 50,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.642307692307692,
+        "assistant": 0.27692307692307677
+      }
+    },
+    "request_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 25,
+          "both": 25,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6807692307692308,
+          "assistant": 0.24999999999999994
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 25,
+          "both": 25,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6038461538461537,
+          "assistant": 0.30384615384615377
+        }
+      }
+    },
+    "request_first10_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 25,
+          "both": 25,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6807692307692308,
+          "assistant": 0.24999999999999994
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 25,
+          "both": 25,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6038461538461537,
+          "assistant": 0.30384615384615377
+        }
+      }
+    },
+    "request_by_family": {
+      "arithmetic": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.625,
+          "assistant": 0.375
+        }
+      },
+      "bereavement": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7,
+          "assistant": 0.2
+        }
+      },
+      "blame": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.625,
+          "assistant": 0.19999999999999998
+        }
+      },
+      "booking": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.475,
+          "assistant": 0.35
+        }
+      },
+      "confidentiality": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 3,
+          "both": 3,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8,
+          "assistant": 0.125
+        }
+      },
+      "frustration": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6625,
+          "assistant": 0.25
+        }
+      },
+      "scheduling": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.475,
+          "assistant": 0.55
+        }
+      },
+      "tests": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7,
+          "assistant": 0.15
+        }
+      },
+      "tutoring": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.5625000000000001,
+          "assistant": 0.3375
+        }
+      },
+      "tylenol": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 3,
+          "both": 3,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.875,
+          "assistant": 0.1
+        }
+      }
+    },
+    "paired_request": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.07692307692307693,
+        "positive": 14,
+        "negative": 9,
+        "ties": 3
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": -0.05384615384615385,
+        "positive": 7,
+        "negative": 13,
+        "ties": 6
+      }
+    },
+    "paired_request_first10": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.07692307692307693,
+        "positive": 14,
+        "negative": 9,
+        "ties": 3
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": -0.05384615384615385,
+        "positive": 7,
+        "negative": 13,
+        "ties": 6
+      }
+    },
+    "matched_anchors": {
+      "fact": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 11,
+            "both": 11,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.6636363636363635,
+            "assistant": 0.13181818181818183
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 14,
+            "both": 14,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.6318181818181817,
+            "assistant": 0.16363636363636366
+          }
+        }
+      },
+      "primary": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 14,
+            "both": 14,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7818181818181817,
+            "assistant": 0.14090909090909093
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 19,
+            "both": 19,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7,
+            "assistant": 0.20454545454545459
+          }
+        }
+      },
+      "request": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 22,
+            "both": 22,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.659090909090909,
+            "assistant": 0.27272727272727276
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 22,
+            "both": 22,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.5545454545454545,
+            "assistant": 0.34090909090909094
+          }
+        }
+      }
+    },
+    "paired_matched_anchors": {
+      "fact": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.03181818181818183,
+          "positive": 10,
+          "negative": 5,
+          "ties": 7
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.03181818181818182,
+          "positive": 2,
+          "negative": 9,
+          "ties": 11
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.08181818181818182,
+          "positive": 12,
+          "negative": 5,
+          "ties": 5
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.06363636363636364,
+          "positive": 4,
+          "negative": 11,
+          "ties": 7
+        }
+      },
+      "request": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.10454545454545454,
+          "positive": 13,
+          "negative": 8,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.06818181818181818,
+          "positive": 6,
+          "negative": 11,
+          "ties": 5
+        }
+      }
+    },
+    "paired_primary_by_family": {
+      "arithmetic": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.05000000000000002,
+          "positive": 1,
+          "negative": 3,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.05,
+          "positive": 2,
+          "negative": 1,
+          "ties": 1
+        }
+      },
+      "bereavement": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -5.551115123125783e-17,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.0,
+          "positive": 0,
+          "negative": 0,
+          "ties": 2
+        }
+      },
+      "blame": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.15000000000000002,
+          "positive": 2,
+          "negative": 0,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.04999999999999999,
+          "positive": 0,
+          "negative": 1,
+          "ties": 1
+        }
+      },
+      "booking": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.0,
+          "positive": 0,
+          "negative": 0,
+          "ties": 2
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.05,
+          "positive": 0,
+          "negative": 1,
+          "ties": 1
+        }
+      },
+      "frustration": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.19999999999999998,
+          "positive": 3,
+          "negative": 0,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.225,
+          "positive": 0,
+          "negative": 4,
+          "ties": 0
+        }
+      },
+      "scheduling": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.29999999999999993,
+          "positive": 2,
+          "negative": 0,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.1,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        }
+      },
+      "tests": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.050000000000000044,
+          "positive": 1,
+          "negative": 0,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.1,
+          "positive": 0,
+          "negative": 2,
+          "ties": 0
+        }
+      },
+      "tutoring": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.05000000000000002,
+          "positive": 2,
+          "negative": 1,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.02500000000000001,
+          "positive": 1,
+          "negative": 1,
+          "ties": 2
+        }
+      }
+    },
+    "primary_equal_family_assistant_difference": -0.0625,
+    "primary_without_auxiliary": {
+      "user": {
+        "n": 16,
+        "mean_assist_minus_copy": 0.0625,
+        "positive": 8,
+        "negative": 4,
+        "ties": 4
+      },
+      "assistant": {
+        "n": 16,
+        "mean_assist_minus_copy": -0.03125,
+        "positive": 4,
+        "negative": 7,
+        "ties": 5
+      }
+    },
+    "samples": {
+      "user": {
+        "presence_count_out_of_five_histogram": {
+          "4": 1,
+          "5": 38
+        },
+        "agreement_with_greedy": 194,
+        "comparisons": 195,
+        "median_density_range": 0.30000000000000004
+      },
+      "assistant": {
+        "presence_count_out_of_five_histogram": {
+          "0": 2,
+          "1": 6,
+          "2": 6,
+          "3": 6,
+          "4": 5,
+          "5": 14
+        },
+        "agreement_with_greedy": 149,
+        "comparisons": 195,
+        "median_density_range": 0.2
+      }
+    },
+    "factual_pairs": {
+      "fact": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.09230769230769231,
+          "positive": 13,
+          "negative": 7,
+          "ties": 6
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": -0.03076923076923077,
+          "positive": 2,
+          "negative": 11,
+          "ties": 13
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 24,
+          "mean_main_minus_control": -0.029166666666666657,
+          "positive": 9,
+          "negative": 12,
+          "ties": 3
+        },
+        "assistant": {
+          "n": 24,
+          "mean_main_minus_control": 0.004166666666666668,
+          "positive": 7,
+          "negative": 7,
+          "ties": 10
+        }
+      },
+      "request": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.06153846153846155,
+          "positive": 14,
+          "negative": 7,
+          "ties": 5
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": -0.03846153846153846,
+          "positive": 6,
+          "negative": 17,
+          "ties": 3
+        }
+      }
+    },
+    "review_sensitivity": {
+      "corrections": 6,
+      "request": {
+        "n": 52,
+        "presence": {
+          "user": 52,
+          "assistant": 50,
+          "both": 50,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6384615384615382,
+          "assistant": 0.27692307692307677
+        }
+      }
+    },
+    "numerical_sensitivity": {
+      "token_identical": 114,
+      "n": 156,
+      "changed": 42,
+      "mean_exact_phrase_jaccard": 0.7937703736465347,
+      "changed_mean_exact_phrase_jaccard": 0.23400424497284295,
+      "interpretation": "Lexical stability only; changed diagnostic readouts were not exhaustively perspective-labeled."
+    },
+    "copy_behavior": {
+      "full_exact": 0,
+      "n": 26
+    },
+    "provenance": {
+      "readouts_sha256": "c1f60ed1aba7e56e9e345abf4042c7f0f08ee61c617fb1f1d67995e8c48d7dd9",
+      "labels_sha256": "80e972793e885aaaa9f3278c9f50e0d50d16b0127de3e82590188e139146ba84",
+      "denominator": "52 final-request greedy readouts = 26 messages x 2 instructions; not 52 independent scenarios. Labels overlap. Phrase fractions equally weight readouts."
+    }
+  },
+  "tulu": {
+    "request": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 43,
+        "both": 43,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.7230769230769232,
+        "assistant": 0.2153846153846153
+      }
+    },
+    "request_first10": {
+      "n": 52,
+      "presence": {
+        "user": 52,
+        "assistant": 43,
+        "both": 43,
+        "neither": 0
+      },
+      "mean_phrase_fraction": {
+        "user": 0.7230769230769232,
+        "assistant": 0.2153846153846153
+      }
+    },
+    "request_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 24,
+          "both": 24,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.5961538461538461,
+          "assistant": 0.30384615384615377
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 19,
+          "both": 19,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8499999999999999,
+          "assistant": 0.12692307692307692
+        }
+      }
+    },
+    "request_first10_by_task": {
+      "assist": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 24,
+          "both": 24,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.5961538461538461,
+          "assistant": 0.30384615384615377
+        }
+      },
+      "copy": {
+        "n": 26,
+        "presence": {
+          "user": 26,
+          "assistant": 19,
+          "both": 19,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8499999999999999,
+          "assistant": 0.12692307692307692
+        }
+      }
+    },
+    "request_by_family": {
+      "arithmetic": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.825,
+          "assistant": 0.20000000000000004
+        }
+      },
+      "bereavement": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.675,
+          "assistant": 0.15
+        }
+      },
+      "blame": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 3,
+          "both": 3,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.8,
+          "assistant": 0.07500000000000001
+        }
+      },
+      "booking": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.4,
+          "assistant": 0.425
+        }
+      },
+      "confidentiality": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 3,
+          "both": 3,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.575,
+          "assistant": 0.325
+        }
+      },
+      "frustration": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 5,
+          "both": 5,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.85,
+          "assistant": 0.125
+        }
+      },
+      "scheduling": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 4,
+          "both": 4,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.625,
+          "assistant": 0.275
+        }
+      },
+      "tests": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 3,
+          "both": 3,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.675,
+          "assistant": 0.3
+        }
+      },
+      "tutoring": {
+        "n": 8,
+        "presence": {
+          "user": 8,
+          "assistant": 8,
+          "both": 8,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.6874999999999999,
+          "assistant": 0.2875
+        }
+      },
+      "tylenol": {
+        "n": 4,
+        "presence": {
+          "user": 4,
+          "assistant": 1,
+          "both": 1,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.9249999999999999,
+          "assistant": 0.025
+        }
+      }
+    },
+    "paired_request": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": -0.25384615384615383,
+        "positive": 2,
+        "negative": 20,
+        "ties": 4
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.17692307692307693,
+        "positive": 17,
+        "negative": 2,
+        "ties": 7
+      }
+    },
+    "paired_request_first10": {
+      "user": {
+        "n": 26,
+        "mean_assist_minus_copy": -0.25384615384615383,
+        "positive": 2,
+        "negative": 20,
+        "ties": 4
+      },
+      "assistant": {
+        "n": 26,
+        "mean_assist_minus_copy": 0.17692307692307693,
+        "positive": 17,
+        "negative": 2,
+        "ties": 7
+      }
+    },
+    "matched_anchors": {
+      "fact": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 14,
+            "both": 14,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.7590909090909091,
+            "assistant": 0.10909090909090911
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 4,
+            "both": 4,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.8181818181818181,
+            "assistant": 0.03636363636363637
+          }
+        }
+      },
+      "primary": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 15,
+            "both": 15,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.8227272727272726,
+            "assistant": 0.13636363636363638
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 12,
+            "both": 12,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.8545454545454544,
+            "assistant": 0.08181818181818183
+          }
+        }
+      },
+      "request": {
+        "assist": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 21,
+            "both": 21,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.5909090909090909,
+            "assistant": 0.3045454545454546
+          }
+        },
+        "copy": {
+          "n": 22,
+          "presence": {
+            "user": 22,
+            "assistant": 18,
+            "both": 18,
+            "neither": 0
+          },
+          "mean_phrase_fraction": {
+            "user": 0.8454545454545453,
+            "assistant": 0.14090909090909093
+          }
+        }
+      }
+    },
+    "paired_matched_anchors": {
+      "fact": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.059090909090909104,
+          "positive": 8,
+          "negative": 10,
+          "ties": 4
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.07272727272727274,
+          "positive": 12,
+          "negative": 2,
+          "ties": 8
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.0318181818181818,
+          "positive": 9,
+          "negative": 8,
+          "ties": 5
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.05454545454545455,
+          "positive": 8,
+          "negative": 3,
+          "ties": 11
+        }
+      },
+      "request": {
+        "user": {
+          "n": 22,
+          "mean_assist_minus_copy": -0.2545454545454545,
+          "positive": 2,
+          "negative": 16,
+          "ties": 4
+        },
+        "assistant": {
+          "n": 22,
+          "mean_assist_minus_copy": 0.16363636363636364,
+          "positive": 14,
+          "negative": 2,
+          "ties": 6
+        }
+      }
+    },
+    "paired_primary_by_family": {
+      "arithmetic": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.0,
+          "positive": 2,
+          "negative": 2,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.05,
+          "positive": 1,
+          "negative": 2,
+          "ties": 1
+        }
+      },
+      "bereavement": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.050000000000000044,
+          "positive": 1,
+          "negative": 0,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.05,
+          "positive": 1,
+          "negative": 0,
+          "ties": 1
+        }
+      },
+      "blame": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.35000000000000003,
+          "positive": 0,
+          "negative": 2,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.4,
+          "positive": 2,
+          "negative": 0,
+          "ties": 0
+        }
+      },
+      "booking": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": -0.15,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.0,
+          "positive": 0,
+          "negative": 0,
+          "ties": 2
+        }
+      },
+      "frustration": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": 2.7755575615628914e-17,
+          "positive": 2,
+          "negative": 1,
+          "ties": 1
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.05,
+          "positive": 2,
+          "negative": 0,
+          "ties": 2
+        }
+      },
+      "scheduling": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.050000000000000044,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.15000000000000002,
+          "positive": 1,
+          "negative": 0,
+          "ties": 1
+        }
+      },
+      "tests": {
+        "user": {
+          "n": 2,
+          "mean_assist_minus_copy": 5.551115123125783e-17,
+          "positive": 1,
+          "negative": 1,
+          "ties": 0
+        },
+        "assistant": {
+          "n": 2,
+          "mean_assist_minus_copy": 0.05,
+          "positive": 1,
+          "negative": 0,
+          "ties": 1
+        }
+      },
+      "tutoring": {
+        "user": {
+          "n": 4,
+          "mean_assist_minus_copy": 0.024999999999999994,
+          "positive": 1,
+          "negative": 0,
+          "ties": 3
+        },
+        "assistant": {
+          "n": 4,
+          "mean_assist_minus_copy": -0.025,
+          "positive": 0,
+          "negative": 1,
+          "ties": 3
+        }
+      }
+    },
+    "primary_equal_family_assistant_difference": 0.078125,
+    "primary_without_auxiliary": {
+      "user": {
+        "n": 16,
+        "mean_assist_minus_copy": -0.04999999999999999,
+        "positive": 6,
+        "negative": 7,
+        "ties": 3
+      },
+      "assistant": {
+        "n": 16,
+        "mean_assist_minus_copy": 0.05625,
+        "positive": 5,
+        "negative": 3,
+        "ties": 8
+      }
+    },
+    "samples": {
+      "user": {
+        "presence_count_out_of_five_histogram": {
+          "5": 39
+        },
+        "agreement_with_greedy": 195,
+        "comparisons": 195,
+        "median_density_range": 0.29999999999999993
+      },
+      "assistant": {
+        "presence_count_out_of_five_histogram": {
+          "0": 1,
+          "1": 6,
+          "2": 8,
+          "3": 9,
+          "4": 6,
+          "5": 9
+        },
+        "agreement_with_greedy": 127,
+        "comparisons": 195,
+        "median_density_range": 0.2
+      }
+    },
+    "factual_pairs": {
+      "fact": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.057692307692307696,
+          "positive": 13,
+          "negative": 11,
+          "ties": 2
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": -0.0038461538461538472,
+          "positive": 3,
+          "negative": 7,
+          "ties": 16
+        }
+      },
+      "primary": {
+        "user": {
+          "n": 24,
+          "mean_main_minus_control": 0.016666666666666663,
+          "positive": 7,
+          "negative": 8,
+          "ties": 9
+        },
+        "assistant": {
+          "n": 24,
+          "mean_main_minus_control": 0.03333333333333333,
+          "positive": 9,
+          "negative": 1,
+          "ties": 14
+        }
+      },
+      "request": {
+        "user": {
+          "n": 26,
+          "mean_main_minus_control": 0.015384615384615372,
+          "positive": 10,
+          "negative": 8,
+          "ties": 8
+        },
+        "assistant": {
+          "n": 26,
+          "mean_main_minus_control": -0.01538461538461538,
+          "positive": 9,
+          "negative": 10,
+          "ties": 7
+        }
+      }
+    },
+    "review_sensitivity": {
+      "corrections": 10,
+      "request": {
+        "n": 52,
+        "presence": {
+          "user": 52,
+          "assistant": 44,
+          "both": 44,
+          "neither": 0
+        },
+        "mean_phrase_fraction": {
+          "user": 0.7057692307692309,
+          "assistant": 0.2153846153846153
+        }
+      }
+    },
+    "numerical_sensitivity": {
+      "token_identical": 114,
+      "n": 156,
+      "changed": 42,
+      "mean_exact_phrase_jaccard": 0.795349727445911,
+      "changed_mean_exact_phrase_jaccard": 0.23987041622766964,
+      "interpretation": "Lexical stability only; changed diagnostic readouts were not exhaustively perspective-labeled."
+    },
+    "copy_behavior": {
+      "full_exact": 22,
+      "n": 26
+    },
+    "provenance": {
+      "readouts_sha256": "b1f195ae32b5f067f17f0216d5b486f6a039d0145a8ee0666c85fb6b7d8ea175",
+      "labels_sha256": "d230e7ca9125eeef40b2ca2469f7d8abfbf94cc20014e4a2c289e571d22598fd",
+      "denominator": "52 final-request greedy readouts = 26 messages x 2 instructions; not 52 independent scenarios. Labels overlap. Phrase fractions equally weight readouts."
+    }
+  }
+}

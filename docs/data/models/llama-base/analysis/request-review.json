@@ -1,0 +1,152 @@
+{
+  "reviewer": "Codex assistant; not a human review or independent blinded annotator",
+  "scope": "All 52 final-request greedy readouts, all 520 phrases, read with source prefixes and automated labels. Other anchors and samples are not exhaustively reviewed.",
+  "created_at": 1792218589.923245,
+  "source_sha256": "c1f60ed1aba7e56e9e345abf4042c7f0f08ee61c617fb1f1d67995e8c48d7dd9",
+  "automated_labels_sha256": "80e972793e885aaaa9f3278c9f50e0d50d16b0127de3e82590188e139146ba84",
+  "reviewed_sources": [
+    "arithmetic-crossed-assist-0__request",
+    "arithmetic-crossed-assist-1__request",
+    "arithmetic-crossed-copy-0__request",
+    "arithmetic-crossed-copy-1__request",
+    "arithmetic-stated-assist-0__request",
+    "arithmetic-stated-assist-1__request",
+    "arithmetic-stated-copy-0__request",
+    "arithmetic-stated-copy-1__request",
+    "bereavement-stated-assist-0__request",
+    "bereavement-stated-assist-1__request",
+    "bereavement-stated-copy-0__request",
+    "bereavement-stated-copy-1__request",
+    "blame-stated-assist-0__request",
+    "blame-stated-assist-1__request",
+    "blame-stated-copy-0__request",
+    "blame-stated-copy-1__request",
+    "booking-stated-assist-0__request",
+    "booking-stated-assist-1__request",
+    "booking-stated-copy-0__request",
+    "booking-stated-copy-1__request",
+    "confidentiality-stated-assist-0__request",
+    "confidentiality-stated-assist-1__request",
+    "confidentiality-stated-copy-0__request",
+    "confidentiality-stated-copy-1__request",
+    "frustration-crossed-assist-0__request",
+    "frustration-crossed-assist-1__request",
+    "frustration-crossed-copy-0__request",
+    "frustration-crossed-copy-1__request",
+    "frustration-stated-assist-0__request",
+    "frustration-stated-assist-1__request",
+    "frustration-stated-copy-0__request",
+    "frustration-stated-copy-1__request",
+    "scheduling-stated-assist-0__request",
+    "scheduling-stated-assist-1__request",
+    "scheduling-stated-copy-0__request",
+    "scheduling-stated-copy-1__request",
+    "tests-stated-assist-0__request",
+    "tests-stated-assist-1__request",
+    "tests-stated-copy-0__request",
+    "tests-stated-copy-1__request",
+    "tutoring-crossed-assist-0__request",
+    "tutoring-crossed-assist-1__request",
+    "tutoring-crossed-copy-0__request",
+    "tutoring-crossed-copy-1__request",
+    "tutoring-stated-assist-0__request",
+    "tutoring-stated-assist-1__request",
+    "tutoring-stated-copy-0__request",
+    "tutoring-stated-copy-1__request",
+    "tylenol-stated-assist-0__request",
+    "tylenol-stated-assist-1__request",
+    "tylenol-stated-copy-0__request",
+    "tylenol-stated-copy-1__request"
+  ],
+  "corrections": [
+    {
+      "source": "arithmetic-crossed-copy-0__request",
+      "index": 6,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete question about off-the-shoulder clothing; no identifiable focal user state or helper response."
+    },
+    {
+      "source": "arithmetic-crossed-copy-1__request",
+      "index": 1,
+      "phrase": " Please explain your steps.↵↵**Answer:**",
+      "before": {
+        "user": false,
+        "assistant": true
+      },
+      "after": {
+        "user": true,
+        "assistant": true
+      },
+      "reason": "Contains a user request to explain the steps and an Answer heading; retain both components, consistently with the paired readout."
+    },
+    {
+      "source": "scheduling-stated-copy-0__request",
+      "index": 2,
+      "phrase": " Thanks!↵↵Here's the timetable:↵↵|",
+      "before": {
+        "user": false,
+        "assistant": true
+      },
+      "after": {
+        "user": true,
+        "assistant": true
+      },
+      "reason": "Thanks followed by Here is the timetable spans user acknowledgement and helper response; identical phrase is both-labeled in the paired control."
+    },
+    {
+      "source": "tutoring-stated-assist-0__request",
+      "index": 5,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "tutoring-stated-assist-0__request",
+      "index": 10,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Repeated unrelated incomplete clothing question has unresolved ownership."
+    },
+    {
+      "source": "tutoring-stated-assist-1__request",
+      "index": 9,
+      "phrase": " Why is the off-the-shoulder",
+      "before": {
+        "user": true,
+        "assistant": false
+      },
+      "after": {
+        "user": false,
+        "assistant": false
+      },
+      "reason": "Unrelated incomplete clothing question has unresolved ownership."
+    }
+  ],
+  "limitations": [
+    "Many decoded phrases are request continuations, generic answer scaffolding, or unrelated fragments. Broad attribution is not evidence of factual fidelity or a specific psychological state.",
+    "Ambiguous ownership remains in greetings, draft-email fragments, generic clarification questions, and answer headings. The review does not eliminate classifier uncertainty.",
+    "Original automated labels remain unchanged and are the primary comparable analysis; correction sensitivity is reported separately."
+  ]
+}

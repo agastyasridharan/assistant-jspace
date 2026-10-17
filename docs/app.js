@@ -25,7 +25,7 @@ function evidence(row,category){return [...new Set(category.fields.flatMap(f=>ro
 function classBadge(category){return `<span class="class-badge class-${category.key}" title="${escape(category.description)}">${category.label}</span>`}
 function classificationHeader(row){if(!row)return '<p class="hint">Classification unavailable for this readout.</p>';
  const present=perspectiveClasses.filter(c=>evidence(row,c).length);
- return `<div class="class-summary">${present.map(classBadge).join('')||'<span class="hint">No clear User or Assistant attribution</span>'}</div><p class="class-status">Broad labels · automated, provisional</p>`}
+ return `<div class="class-summary">${present.map(classBadge).join('')||'<span class="hint">No clear User or Assistant attribution</span>'}</div><p class="class-status">Broad labels · automated, provisional · <a href="replication-analysis.html">Analysis and review</a></p>`}
 function classifiedPhrases(phrases,row){return '<ol class="phrases classified">'+phrases.map((p,i)=>{const categories=row?perspectiveClasses.filter(c=>evidence(row,c).includes(i+1)):[];return `<li><span>${escape(p)}</span>${categories.length?'<span class="phrase-classes">'+categories.map(classBadge).join('')+'</span>':''}</li>`}).join('')+'</ol>'}
 function oraclePanel(rec,data){const c=canonical(data,$('anchor').value),o=data?.oracle?.[c];if(!o)return '<article class="panel"><div class="eyebrow">'+rec.condition+'</div>'+pending()+'</article>';
  const controls=checks.oracle_sites?.find(x=>x.key===o.key);const samples=data.samples?.[c]||[];const classification=classifications[rec.id+'__'+c];
