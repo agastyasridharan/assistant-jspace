@@ -123,7 +123,7 @@ def capture():
  status('capture_complete',records=52)
 @torch.no_grad()
 def oracle():
- gate();p=verify_provenance();status('loading_oracle');model=LM.load_model(p['oracle_backbone'],'fp8',devices=['cuda:2'],head=True);meta=json.loads((Path(p['adapter'])/'meta.json').read_text());model.load_lora('ao',load_file(str(Path(p['adapter'])/'adapter.safetensors')),meta['r'],meta['alpha'])
+ gate();p=verify_provenance();status('loading_oracle');model=LM.load_model(p['oracle_backbone'],'fp8',devices=[os.environ.get('OLENS_ORACLE_DEVICE','cuda:2')],head=True);meta=json.loads((Path(p['adapter'])/'meta.json').read_text());model.load_lora('ao',load_file(str(Path(p['adapter'])/'adapter.safetensors')),meta['r'],meta['alpha'])
  ids,mp=D.ao_prompt(tok,L,10,8,D.marker_id(tok));save(ROOT/'checks/oracle_prompt.json',{'input_ids':ids,'text':tok.decode(ids),'marker':mp,'layer':L,'injection':'native normalized input embedding, alpha=16000'})
  def decode(vec,seed=0,sampling=False):
   torch.manual_seed(seed);x=torch.tensor([ids],device=model.dev0);emb=model.embed(x)

@@ -74,3 +74,11 @@ append discrepancy with the original attention backend. The v2 run recaptures al
 records from scratch with unchanged primary capture/decoding, replacing the
 conflated 1% causal/numerical gate with the separate checks above. No trained
 weights, original model implementation, or Qwen outputs are modified.
+
+GPU allocation amendment (2026-10-16): user reduced the budget by two GPUs.
+Maximum four GPUs: base uses 2,3,4; Tulu uses only 7 after all capture checks passed.
+GPUs 5 and 6 were released at a safe pause. Tulu resumes the oracle stage with
+resume_oracle_one_gpu.sh. The only worker change makes the oracle logical device
+selectable by OLENS_ORACLE_DEVICE (default cuda:2; one-GPU Tulu uses cuda:0).
+Original code/provenance are preserved; code_history and capture_code_sha256
+record the transition. No study parameters, weights, or saved outputs change.
