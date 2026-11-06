@@ -1,104 +1,89 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Newer O-lenses</title><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet"><link href="style.css" rel="stylesheet">
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>O-lens perspectives</title><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@400;500&display=swap" rel="stylesheet"><link href="style.css" rel="stylesheet">
 <style>
 main{max-width:1100px}article.writeup{max-width:820px}h2{font-size:20px;margin-top:34px}h3{font:500 16px var(--serif);margin:26px 0 8px}p,li{line-height:1.7;font-size:15px}ol,ul{padding-left:24px}li{margin:4px 0}
-.lede{font:17px/1.7 var(--serif)}sup a{font:11px var(--mono);padding:0 1px}.notes li{font-size:13px;color:#3d4a57}
-.lensdef{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:14px 0;font-size:14px}.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;vertical-align:-1px}
+.lede{font:17px/1.7 var(--serif)}sup a{font:11px var(--mono);padding:0 1px}.notes li{font-size:13px;color:#3d4a57}.sw{display:inline-block;width:11px;height:11px;border-radius:2px;margin-right:7px;vertical-align:-1px}
 .fig{margin:22px 0 8px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:16px 16px 10px}.fig h3{margin:0 0 2px}.fig .hint{margin:2px 0 10px}
 .legend{display:flex;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--muted);margin:0 0 6px}
 .panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:10px}.panels svg,.headfig svg{width:100%;height:auto;display:block}
-.panel-title{font:500 13px var(--serif);text-anchor:middle;fill:var(--ink)}.ax{font:10px var(--mono);fill:#667482}.grid{stroke:#e8ecef}.val{font:9px var(--mono);fill:#3d4a57;text-anchor:middle;pointer-events:none}
-.bar,.dot{cursor:pointer}.bar:hover,.bar.on{opacity:.75}.hit{fill:transparent;cursor:pointer}
-#tip{position:fixed;z-index:50;max-width:380px;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 4px 16px rgba(21,34,48,.12);padding:10px 12px;font-size:12px;line-height:1.5;pointer-events:auto;display:none}
+.panel-title{font:500 13px var(--serif);text-anchor:middle;fill:var(--ink)}.ax{font:10px var(--mono);fill:#667482}.grid{stroke:#e8ecef}.val{font:9.5px var(--mono);fill:#3d4a57;text-anchor:middle;pointer-events:none}
+.bar,.dot{cursor:pointer}.bar:hover{opacity:.78}
+#tip{position:fixed;z-index:50;max-width:380px;background:#fff;border:1px solid var(--line);border-radius:4px;box-shadow:0 4px 16px rgba(21,34,48,.12);padding:10px 12px;font-size:12px;line-height:1.5;display:none}
 #tip b{font-weight:600}#tip .ex{margin:6px 0 0;padding-left:16px}#tip .ex li{font-size:12px;line-height:1.45;margin:3px 0}#tip .ex a{font:10px var(--mono)}#tip .close{float:right;border:0;padding:0 2px;background:none;font-size:14px;color:var(--muted)}
-table.small td,table.small th{font-size:13px;padding:7px 10px}
 </style></head><body>
-<header><h1>O-lens <span>· replication with newer lenses</span></h1><a href="index.html?lens=s225#oracle">Dashboard (s225 readouts)</a><a href="replication-analysis.html">Model comparison</a></header>
+<header><h1>O-lens <span>· whose perspective on user tokens?</span></h1><a href="index.html?family=arithmetic&task=assist&attitude=stated&anchor=request&lens=s225#oracle">Dashboard (all readouts)</a></header>
 <main><article class="writeup">
-<h2 style="margin-top:20px">Privilegedness of the assistant (Oracle Lens): replication with two newer O-lenses</h2>
-<p class="lede">In the post, we used the O-lens to ask whether Qwen3.6-27B represents the <em>user's</em> perspective or the <em>assistant's</em> while it reads a user message. Here we reran the same experiment with two newer O-lenses for the same model, to check whether the result depends on the particular lens.</p>
-<p>The two new lenses both read the output of block 56, a later layer than the original lens (block 45):</p>
-<div class="lensdef">
-<span><span class="sw" style="background:#2a78d6"></span><b>Original</b></span><span>The O-lens used in the post (ceselder), reading the input to block 45, greedy decoding.</span>
-<span><span class="sw" style="background:#eb6834"></span><b>rl600</b></span><span>Agam's O-lens (<code>olens_s3d_rl600</code>). It was trained only on positions inside the assistant's reply, so it has never been trained to read a user token.</span>
-<span><span class="sw" style="background:#1baf7a"></span><b>s225</b></span><span>Our continuation of rl600, trained further on user-turn, chat-template and thinking positions.</span>
-</div>
-<p>Since s225 and rl600 differ only in whether the lens was trained on user tokens, comparing them also tells us whether a lens's training data changes how much "assistant" it reads into a user message.</p>
-
-<h3>Setup</h3>
-<p>We used exactly the same 26 messages, the same system prompt ("You are an AI assistant.") and the same three positions as the original:</p>
+<h2 style="margin-top:20px">Privilegedness of the assistant (Oracle Lens)</h2>
+<p class="lede">To investigate how privileged the assistant persona is on user turns, we constructed a set of scenarios in which the user's perspective differed markedly from the assistant's.</p>
+<p>For example, a user might confidently insist that 17 × 6 = 112, even though the correct answer is 102.</p>
+<ul><li>If the model was representing the user's perspective, we might expect to see representations of confidence in the answer.</li><li>If it was representing the assistant's, we might instead see a recognition of the user's mistake and an intention to correct it.</li></ul>
+<p>We tested 26 such messages on Qwen3.6-27B. Using the O-lens (block 56 output, the <a href="https://huggingface.co/agastyasridharan/olens-qwen3.6-27b-userthink-s225"><code>olens-qwen3.6-27b-userthink-s225</code></a> checkpoint), we examined the model's activations at three points while it processed each user message:</p>
 <ol><li><b>Fact boundary</b>: after the relevant factual information, such as the user's arithmetic answer.</li><li><b>Primary/appraisal boundary</b>: after the sentence describing what the user thought or felt about the situation (e.g., their confidence in an answer or frustration with the assistant).</li><li><b>Request boundary</b>: at the end of the complete user message, after the user had asked the assistant to do something.</li></ol>
-<p>As before, we tested each message under two instructions: one asking Qwen to respond normally (<b>Assist</b>), and one asking it to copy the user's message without answering (<b>Copy</b>). We checked token by token that every position matched the original experiment.</p>
-<p>We then used GPT-5.4, with the post's classification prompt unchanged, to label each phrase by whose perspective it expressed:</p>
-<ul><li><b>User</b>: the user's feelings, beliefs, goals, or perspective, either explicitly attributed to the user or implied by the context.</li><li><b>Assistant</b>: the assistant's judgments, reactions, intended responses, or response plans.</li></ul>
-<p>As before, a phrase could receive both labels, or neither.</p>
-
-<h3>What we had to change</h3>
-<p>The newer lenses don't produce output in the same shape as the original, so three things differ:</p>
-<ol><li><b>Phrase length.</b> The original lens writes about 20 separate 8-token phrases per readout. The newer lenses write about 4 bullet points of ~24 tokens each. A long bullet almost always contains <em>something</em> about the user, so labelling whole bullets pushes the User share to 92–96% and makes it incomparable with the original. To compare like with like, we cut each bullet into 8-token pieces and labelled those.<sup><a href="#n1">1</a></sup></li>
-<li><b>Sampling.</b> The original used greedy decoding. The newer lenses were trained with sampling, so we sampled (temperature 0.8). The figures use one sampled readout per position. We drew 8 more per position to check that the results aren't a fluke of one sample.<sup><a href="#n2">2</a></sup></li>
-<li><b>Layer.</b> Block 56 sits later in the model (closer to its output) than block 45. Some differences between the original and the new lenses may come from the layer rather than the lens.</li></ol>
-<p>We also checked that each new lens was the one we meant to load: at a position where the two lenses are known to differ sharply, both behaved as expected.<sup><a href="#n3">3</a></sup></p>
-
+<p>We tested each message under two instructions:</p>
+<ul><li><b>Assist</b>: Qwen is asked to respond normally.</li><li><b>Copy</b>: Qwen is asked to copy the user's message without answering.</li></ul>
+<p>If assistant-like reactions appeared even when Qwen was only asked to copy the user's message, this would suggest that the model represents the assistant's perspective by default, even when the task doesn't call for it.</p>
+<p>This O-lens describes an activation in a few bullet points of about 24 tokens each. A long bullet almost always contains <em>something</em> about the user, so we split each bullet into 8-token phrases and classified those.<sup><a href="#n1">1</a></sup> The lens was trained with sampling, so we sampled its readouts (temperature 0.8). The figures use one readout per position; we drew eight more to check the results.<sup><a href="#n2">2</a></sup></p>
+<p>Next, we used GPT-5.4 to classify 1,894 phrases across 152 O-lens readouts according to whose perspective they expressed:<sup><a href="#n3">3</a></sup></p>
+<ul><li><b>User</b>: the user's feelings, beliefs, goals, or perspective, either explicitly attributed to the user or implied by the context.</li><li><b>Assistant</b>: the assistant's judgments, reactions, intended responses, or response plans. This included:<ul><li>phrases explicitly attributed to the assistant;</li><li>unattributed evaluations that could reflect the assistant's judgment;</li><li>instructions or plans for how the assistant should respond.</li></ul></li></ul>
+<p>Note: O-lens readouts are noisy and often contain phrases that could plausibly reflect either perspective. A phrase could therefore receive both labels, or neither, and we distinguish these categories below.</p>
 <h3>Results</h3>
 </article>
 
-<div class="fig headfig"><h3>Share of phrases with User or Assistant content</h3><p class="hint">All three positions. Dots are point estimates; whiskers are 95% bootstrap intervals over the 26 messages. Hover over a dot for its value.</p><div class="legend" id="leg0"></div><div id="head"></div></div>
-<div class="fig"><h3>User and Assistant content in O-lens phrases — Assist only</h3><p class="hint">Blue bars repeat the post's figure exactly. Hover over a bar for its value, interval and three example phrases. Click a bar to pin the box and follow an example to its readout on the dashboard.</p><div class="legend" id="leg1"></div><div class="panels" id="assist"></div></div>
+<div class="fig"><h3>User and Assistant content in O-lens phrases — Assist only</h3><p class="hint">Hover over a bar for its value, interval and three example phrases. Click a bar to pin the box and follow an example to its readout on the dashboard.</p><div class="legend" id="leg1"></div><div class="panels" id="assist"></div></div>
 <div class="fig"><h3>User and Assistant content in O-lens phrases — Copy only</h3><div class="legend" id="leg2"></div><div class="panels" id="copy"></div></div>
+<div class="fig headfig"><h3>Phrases with any User or Assistant content, Assist vs Copy</h3><p class="hint">A phrase with both labels counts in both panels. Whiskers are 95% bootstrap intervals over the 26 messages. Hover over a dot for its value.</p><div class="legend"><span><span class="sw" style="background:#356f80"></span>Assist</span><span><span class="sw" style="background:#eb6834"></span>Copy</span></div><div id="head"></div></div>
 
 <article class="writeup">
 <ul>
-<li><b>The main result replicates.</b> As in the original, the user's perspective appeared more often than the assistant's on user tokens. With rl600, the share of phrases with user content is almost identical to the original (<span data-h="rl600|all|user"></span> vs <span data-h="original|all|user"></span>). With s225 it is higher (<span data-h="s225|all|user"></span>).</li>
-<li><b>Copy again reduces the assistant's perspective, by more than before.</b> Moving from Assist to Copy, the share of phrases with assistant content falls from <span data-h="original|assist|assistant"></span> to <span data-h="original|copy|assistant"></span> for the original lens, from <span data-h="rl600|assist|assistant"></span> to <span data-h="rl600|copy|assistant"></span> for rl600, and from <span data-h="s225|assist|assistant"></span> to <span data-h="s225|copy|assistant"></span> for s225. So with the newer lenses, the assistant's perspective looks even less privileged when Qwen is only asked to copy.</li>
-<li><b>The lens's training matters.</b> s225 reads less of the assistant than rl600 does: <span data-d="s225-rl600|assist|assistant"></span> points of assistant content under Assist, and <span data-d="s225-rl600|copy|assistant"></span> under Copy.<sup><a href="#n4">4</a></sup> The gap is largest at the fact boundary (assistant-only phrases: <span data-c="rl600|assist|fact|assistant_only"></span> → <span data-c="s225|assist|fact|assistant_only"></span>) and the request boundary (<span data-c="rl600|assist|request|assistant_only"></span> → <span data-c="s225|assist|request|assistant_only"></span>). rl600 was only ever trained on assistant replies, and it tends to describe a user token as if the assistant were already answering ("Let's verify your calculation step by step…"). s225, trained on user tokens, more often reads out the user's own words.</li>
-<li><b>At the end of the request, the newer lenses see more of the assistant.</b> Under Assist, rl600 labels <span data-c="rl600|assist|request|assistant_only"></span> of phrases at the request boundary as assistant-only, against <span data-c="original|assist|request|assistant_only"></span> for the original lens. A plausible explanation is the later layer: by the end of the user's request, block 56 may already be planning the reply. This is also why the newer lenses show a larger Assist–Copy difference at the request boundary.</li>
+<li><b>The user's perspective appeared far more often than the assistant's on user tokens.</b>
+ <ul><li>Across all positions and both instructions, <span data-s="all|all|user"></span> of phrases carried user content and <span data-s="all|all|assistant"></span> carried assistant content.</li><li>Many of these phrases simply restate or continue the user's message ("I'm confident…", "Did I get that right?").</li></ul></li>
+<li><b>The assistant's perspective is much weaker under Copy than under Assist.</b> Assistant content fell from <span data-s="assist|all|assistant"></span> of phrases to <span data-s="copy|all|assistant"></span> (<span data-d="copy-assist|all|assistant"></span> points), and user content rose from <span data-s="assist|all|user"></span> to <span data-s="copy|all|user"></span>.<sup><a href="#n4">4</a></sup> Under Copy, assistant-only phrases were rare at every position (1.5–11.6%). This suggests the assistant's perspective is not represented by default when the task doesn't call for it.</li>
+<li><b>The assistant's perspective is concentrated at two positions under Assist.</b>
+ <ul><li><b>Primary/appraisal boundary:</b> <span data-c="assist|primary|both"></span> of phrases mixed the two perspectives. They often acknowledged the user's stance and began a response to it, as in "how to check if your suspicion…" or "完全 [completely] understandable. Here's a natural response".</li><li><b>Request boundary:</b> assistant-only phrases peaked at <span data-c="assist|request|assistant_only"></span>, mostly the start of a reply, or a refusal for harmful requests.</li><li>Switching to Copy changed assistant content at these two positions by <span data-d="copy-assist|primary|assistant"></span> and <span data-d="copy-assist|request|assistant"></span> points respectively.</li></ul></li>
+<li><b>The fact boundary was mostly about the user's situation.</b> It had <span data-c="assist|fact|user_only"></span> user-only phrases under Assist and <span data-c="copy|fact|user_only"></span> under Copy. Most of the remainder (<span data-c="assist|fact|other"></span>) carried neither perspective, typically restating the facts themselves.</li>
 </ul>
-<p>For all readouts and their classifications, use the <b>Lens</b> switch in the O-lens section of the <a href="index.html?family=arithmetic&task=assist&attitude=stated&anchor=request&lens=s225#oracle">dashboard</a>. It shows the original, rl600 and s225 readouts at each position. For the new lenses, each bullet is shaded by the labels of its 8-token pieces, and the 8 extra sampled readouts are listed below it.</p>
-<p>As with the original, there's a lot of room for interpretation here. The new lenses differ from the original in layer, output format and decoding, and GPT-5.4 is an imperfect judge. Still, the basic picture holds across three different lenses: the user's perspective is often represented on user tokens, and the assistant's perspective is not overwhelmingly privileged. The comparison between rl600 and s225 suggests that how much assistant content a lens reports depends partly on what the lens was trained on, which is worth keeping in mind when interpreting O-lens readouts in general.</p>
-
+<p>For all readouts and their classifications, see the O-lens section of the <a href="index.html?family=arithmetic&task=assist&attitude=stated&anchor=request&lens=s225#oracle">dashboard</a>. Each bullet there is shaded by the labels of its 8-token phrases, and the eight extra sampled readouts are listed below it.</p>
+<p>There's a lot of room for interpretation here, and we'd caution against drawing strong conclusions without more robust readouts and controls. Still, it seems clear that the user's perspective is often represented, and that the assistant's perspective largely recedes when Qwen is asked to copy instead of respond.</p>
 <h3>Notes</h3>
 <ol class="notes">
-<li id="n1">Labelled per bullet, the direction of every result is the same, but levels are near ceiling: User 96% (s225) and 92% (rl600). The s225 − rl600 difference per bullet is +4 points User and −8 points Assistant. Pieces from the same bullet are not independent, so all intervals resample whole messages.</li>
-<li id="n2">With all 9 readouts per position (about 1,400 per lens), labelled per bullet by GPT-5.4-mini, the s225 − rl600 difference is +3.6 points User [2.1, 5.0] and −7.4 points Assistant [−9.6, −5.1], matching the single-readout result. On the original readouts, GPT-5.4-mini agrees with GPT-5.4 on 81% (User) and 85% (Assistant) of phrases. We use GPT-5.4 for every number above. Rerunning GPT-5.4 on 8 of the original readouts reproduced the post's labels on 93% / 91% of phrases.</li>
-<li id="n3">At the blank line inside an empty <code>&lt;think&gt;&lt;/think&gt;</code> block, rl600's readouts are known to mention being watched (in about 71% of readouts), and s225's almost never do (about 1%). In this run we got 70.5% and 1.7%.</li>
-<li id="n4">Differences are paired: the two lenses were read with the same sampling seeds at each position. Brackets and whiskers are 95% bootstrap intervals over the 26 messages, with each message's Assist and Copy versions resampled together.</li>
+<li id="n1">Classifying whole bullets gives the same direction (Assistant content falls under Copy), but user content then appears in 96% of bullets, which hides most of the variation. Phrases from the same bullet are not independent, so all intervals resample whole messages.</li>
+<li id="n2">Using all nine readouts per position (1,404 readouts, classified per bullet by GPT-5.4-mini), the drop in assistant content from Assist to Copy is −28.6 points [−34.9, −22.0]. Using only the first readout, as in the figures, it is −28.8 points. So the results are not a fluke of one sample.</li>
+<li id="n3">GPT-5.4 was an imperfect judge, and the classification criteria are fairly subjective. A second judge (GPT-5.4-mini) agreed with GPT-5.4 on 86% (User) and 91% (Assistant) of phrases. We expect the numbers to be roughly in the right range, but you should assign substantial uncertainty around them. Confidentiality messages have no separate appraisal sentence, so their fact-boundary readout also stands in for the primary/appraisal panel. That is why there are 152 readouts rather than 156.</li>
+<li id="n4">Brackets are 95% bootstrap intervals over the 26 messages, with each message's Assist and Copy versions resampled together.</li>
 </ol>
-<p class="hint">Run on 2026-11-06. Lenses: <a href="https://huggingface.co/agastyasridharan/olens-qwen3.6-27b-userthink-s225">s225</a> · rl600 (<code>agu18dec/olens_and_ar</code> @ c95215d, <code>olens_s3d_rl600/</code>) · <a href="https://huggingface.co/ceselder/oracle-lens-qwen3.6-27b">original</a>. Figure data: <a href="data/olens56/fourway.json">fourway.json</a>.</p>
+<p class="hint">Run on 2026-11-06. Figure data: <a href="data/olens56/fourway.json">fourway.json</a> · <a href="data/olens56/s225_stats.json">s225_stats.json</a>.</p>
 </article></main>
 <div id="tip" role="tooltip"></div>
 <script>
-const LENS=[["original","Original O-lens (block 45)","#2a78d6"],["rl600","rl600 (block 56)","#eb6834"],["s225","s225 (block 56, new)","#1baf7a"]];
-const CATS=[["user_only","User only"],["assistant_only","Assistant only"],["both","User and Assistant"],["other","Other"]];
+const CATS=[["user_only","User only","#2f6db5"],["assistant_only","Assistant only","#e0a030"],["both","User and Assistant","#5a8a5e"],["other","Other","#9a9fa6"]];
 const PANELS=[["fact","Fact boundary"],["primary","Primary / appraisal boundary"],["request","Request boundary"]];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const pc=v=>(100*v).toFixed(1)+'%',pp=v=>(v>=0?'+':'−')+Math.abs(100*v).toFixed(1);
 const tip=document.getElementById('tip');let pinned=null;
 function show(html,ev,pin){tip.innerHTML=(pin?'<button class="close" aria-label="Close">×</button>':'')+html;tip.style.display='block';const w=tip.offsetWidth,h=tip.offsetHeight;let x=ev.clientX+14,y=ev.clientY+14;if(x+w>innerWidth-8)x=Math.max(8,ev.clientX-w-14);if(y+h>innerHeight-8)y=Math.max(8,innerHeight-h-8);tip.style.left=x+'px';tip.style.top=y+'px';const b=tip.querySelector('.close');if(b)b.onclick=()=>{pinned=null;tip.style.display='none'}}
-function hide(){if(!pinned)tip.style.display='none'}
-function link(site,lens){const [rec,anchor]=site.split('|');const m=rec.match(/^(.*)-(stated|crossed)-(assist|copy)-\d+$/);if(!m)return '#';const a=anchor==='relief'?'primary':anchor;return `index.html?family=${m[1]}&task=${m[3]}&attitude=${m[2]}&anchor=${a}${lens==='original'?'':'&lens='+lens}#oracle`}
-function legend(id){document.getElementById(id).innerHTML=LENS.map(([,l,c])=>`<span><span class="sw" style="background:${c}"></span>${l}</span>`).join('')}
-fetch('data/olens56/fourway.json?v=1').then(r=>r.json()).then(F=>{
- const C=F.cells,Hd=F.headline;
- document.querySelectorAll('[data-h]').forEach(e=>e.textContent=pc(Hd[e.dataset.h].est));
- document.querySelectorAll('[data-d]').forEach(e=>{const v=Hd[e.dataset.d];e.textContent=`${pp(v.est)} [${pp(v.ci[0])}, ${pp(v.ci[1])}]`});
- document.querySelectorAll('[data-c]').forEach(e=>{const [l,t,p,k]=e.dataset.c.split('|');e.textContent=Math.round(100*C[`${l}|${t}|${p}`].share[k])+'%'});
- ['leg0','leg1','leg2'].forEach(legend);
- // headline dot plot: 2 measures x 2 instructions, 3 lenses each
- const W=900,Hh=230,L=60,R=10,T=26,B=40,groups=[["user","assist","User content · Assist"],["user","copy","User content · Copy"],["assistant","assist","Assistant content · Assist"],["assistant","copy","Assistant content · Copy"]];
- const gw=(W-L-R)/groups.length,y=v=>T+(1-v)*(Hh-T-B);let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Share of phrases with User or Assistant content by lens and instruction">`;
- for(let t=0;t<=100;t+=20)s+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${y(t/100)}" y2="${y(t/100)}"/><text class="ax" x="${L-8}" y="${y(t/100)+3}" text-anchor="end">${t}%</text>`;
- groups.forEach(([m,t,lab],g)=>{const x0=L+g*gw;s+=`<text class="panel-title" x="${x0+gw/2}" y="${Hh-14}">${lab}</text>`;LENS.forEach(([k,ln,col],j)=>{const v=Hd[`${k}|${t}|${m}`],x=x0+gw*(0.3+0.2*j);s+=`<line x1="${x}" x2="${x}" y1="${y(v.ci[0])}" y2="${y(v.ci[1])}" stroke="${col}" stroke-width="3" stroke-linecap="round"/><circle class="dot" cx="${x}" cy="${y(v.est)}" r="5" fill="${col}" stroke="#fff" stroke-width="2" data-tip="${esc(`<b>${ln}</b><br>${lab}: <b>${pc(v.est)}</b> of phrases<br>95% interval ${pc(v.ci[0])} – ${pc(v.ci[1])}`)}"/><text class="val" x="${x+13}" y="${y(v.est)+3}" text-anchor="start" style="text-anchor:start">${Math.round(100*v.est)}</text>`})});
- document.getElementById('head').innerHTML=s+'</svg>';
- // post-style grouped bars
- for(const task of ['assist','copy']){let html='';for(const [p,title] of PANELS){const w=330,h=250,l=34,r=6,t=24,b=48,cw=(w-l-r)/CATS.length,bw=cw*0.26,yy=v=>t+(1-v)*(h-t-b);let g=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${title}, ${task}">`;g+=`<text class="panel-title" x="${w/2}" y="14">${title}</text>`;
+function link(site){const [rec,anchor]=site.split('|');const m=rec.match(/^(.*)-(stated|crossed)-(assist|copy)-\d+$/);return m?`index.html?family=${m[1]}&task=${m[3]}&attitude=${m[2]}&anchor=${anchor}&lens=s225#oracle`:'#'}
+Promise.all([fetch('data/olens56/fourway.json?v=2').then(r=>r.json()),fetch('data/olens56/s225_stats.json?v=1').then(r=>r.json())]).then(([F,S])=>{
+ const C=F.cells;
+ document.querySelectorAll('[data-s]').forEach(e=>e.textContent=pc(S[e.dataset.s].est));
+ document.querySelectorAll('[data-d]').forEach(e=>{const v=S[e.dataset.d];e.textContent=`${pp(v.est)} [${pp(v.ci[0])}, ${pp(v.ci[1])}]`});
+ document.querySelectorAll('[data-c]').forEach(e=>{const [t,p,k]=e.dataset.c.split('|');e.textContent=Math.round(100*C[`s225|${t}|${p}`].share[k])+'%'});
+ for(const id of ['leg1','leg2'])document.getElementById(id).innerHTML=CATS.map(([,l,c])=>`<span><span class="sw" style="background:${c}"></span>${l}</span>`).join('');
+ for(const task of ['assist','copy']){let html='';for(const [p,title] of PANELS){const c=C[`s225|${task}|${p}`];const w=330,h=250,l=34,r=6,t=24,b=48,cw=(w-l-r)/CATS.length,bw=cw*0.6,yy=v=>t+(1-v)*(h-t-b);let g=`<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${title}, ${task}"><text class="panel-title" x="${w/2}" y="14">${title}</text>`;
   for(let k=0;k<=100;k+=25)g+=`<line class="grid" x1="${l}" x2="${w-r}" y1="${yy(k/100)}" y2="${yy(k/100)}"/><text class="ax" x="${l-5}" y="${yy(k/100)+3}" text-anchor="end">${k}</text>`;
-  CATS.forEach(([ck,cl],i)=>{const cx=l+i*cw+cw/2;const two={user_only:['User','only'],assistant_only:['Assistant','only'],both:['User and','Assistant'],other:['Other','']}[ck];g+=`<text class="ax" x="${cx}" y="${h-b+14}" text-anchor="middle">${two[0]}</text><text class="ax" x="${cx}" y="${h-b+26}" text-anchor="middle">${two[1]}</text>`;
-   LENS.forEach(([lk,ln,col],j)=>{const c=C[`${lk}|${task}|${p}`],v=c.share[ck],x=cx+(j-1)*(bw+2)-bw/2;const ex=c.examples[ck].map(e=>`<li>“${esc(e.text)}” <a href="${link(e.site,lk)}">open</a></li>`).join('');
-    const tipHtml=`<b>${esc(ln)}</b> · ${esc(title)} · ${task==='assist'?'Assist':'Copy'}<br>${esc(cl)}: <b>${pc(v)}</b> (${c.count[ck]} of ${c.phrases} phrases, ${c.readouts} readouts)<br>95% interval ${pc(c.ci[ck][0])} – ${pc(c.ci[ck][1])}${ex?'<ul class="ex">'+ex+'</ul>':''}`;
-    g+=`<rect class="bar" x="${x}" y="${yy(v)}" width="${bw}" height="${Math.max(0.5,yy(0)-yy(v))}" rx="2" fill="${col}" data-tip="${esc(tipHtml)}"/><text class="val" x="${x+bw/2}" y="${yy(v)-3}">${Math.round(100*v)}</text>`})});
-  html+=g+`<text class="ax" x="${w/2}" y="${h-6}" text-anchor="middle">phrases: ${LENS.map(([lk])=>C[`${lk}|${task}|${p}`].phrases).join(' · ')}</text></svg>`}
+  CATS.forEach(([ck,cl,col],i)=>{const cx=l+i*cw+cw/2,v=c.share[ck],two={user_only:['User','only'],assistant_only:['Assistant','only'],both:['User and','Assistant'],other:['Other','']}[ck];
+   g+=`<text class="ax" x="${cx}" y="${h-b+14}" text-anchor="middle">${two[0]}</text><text class="ax" x="${cx}" y="${h-b+26}" text-anchor="middle">${two[1]}</text>`;
+   const ex=c.examples[ck].map(e=>`<li>“${esc(e.text)}” <a href="${link(e.site)}">open</a></li>`).join('');
+   const th=`<b>${esc(title)} · ${task==='assist'?'Assist':'Copy'}</b><br>${esc(cl)}: <b>${pc(v)}</b> (${c.count[ck]} of ${c.phrases} phrases, ${c.readouts} readouts)<br>95% interval ${pc(c.ci[ck][0])} – ${pc(c.ci[ck][1])}${ex?'<ul class="ex">'+ex+'</ul>':''}`;
+   g+=`<rect class="bar" x="${cx-bw/2}" y="${yy(v)}" width="${bw}" height="${Math.max(0.5,yy(0)-yy(v))}" rx="2" fill="${col}" data-tip="${esc(th)}"/><text class="val" x="${cx}" y="${yy(v)-4}">${(100*v).toFixed(1)}%</text>`});
+  html+=g+`<text class="ax" x="${w/2}" y="${h-6}" text-anchor="middle">${c.phrases} phrases / ${c.readouts} readouts</text></svg>`}
   document.getElementById(task).innerHTML=html}
- document.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mouseenter',e=>{if(!pinned)show(el.dataset.tip,e,false)});el.addEventListener('mousemove',e=>{if(!pinned)show(el.dataset.tip,e,false)});el.addEventListener('mouseleave',hide);el.addEventListener('click',e=>{e.stopPropagation();pinned=el;show(el.dataset.tip,e,true)})});
+ // summary dot plot: two panels (User content, Assistant content), positions on x, Assist vs Copy
+ const W=900,Hh=240,T=26,B=44,gap=40,pw=(W-gap)/2,y=v=>T+(1-v)*(Hh-T-B),POS=[["fact","Fact"],["primary","Primary"],["request","Request"],["all","All"]];let s=`<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Share of phrases with User or Assistant content by position, Assist vs Copy">`;
+ [["user","User content"],["assistant","Assistant content"]].forEach(([m,lab],k)=>{const x0=k*(pw+gap)+34,x1=x0+pw-40,step=(x1-x0)/POS.length;s+=`<text class="panel-title" x="${(x0+x1)/2}" y="14">${lab}</text>`;
+  for(let t=0;t<=100;t+=25)s+=`<line class="grid" x1="${x0}" x2="${x1}" y1="${y(t/100)}" y2="${y(t/100)}"/><text class="ax" x="${x0-6}" y="${y(t/100)+3}" text-anchor="end">${t}%</text>`;
+  POS.forEach(([p,pl],i)=>{const cx=x0+step*(i+0.5);s+=`<text class="ax" x="${cx}" y="${Hh-B+16}" text-anchor="middle">${pl}</text>`;
+   [["assist","Assist","#356f80",-12],["copy","Copy","#eb6834",12]].forEach(([t,tl,col,dx])=>{const v=S[`${t}|${p}|${m}`],x=cx+dx;s+=`<line x1="${x}" x2="${x}" y1="${y(v.ci[0])}" y2="${y(v.ci[1])}" stroke="${col}" stroke-width="3" stroke-linecap="round"/><circle class="dot" cx="${x}" cy="${y(v.est)}" r="5" fill="${col}" stroke="#fff" stroke-width="2" data-tip="${esc(`<b>${tl} · ${pl==='All'?'all positions':pl+' boundary'}</b><br>${lab}: <b>${pc(v.est)}</b> of phrases<br>95% interval ${pc(v.ci[0])} – ${pc(v.ci[1])}`)}"/>`})})});
+ document.getElementById('head').innerHTML=s+'</svg>';
+ document.querySelectorAll('[data-tip]').forEach(el=>{el.addEventListener('mouseenter',e=>{if(!pinned)show(el.dataset.tip,e,false)});el.addEventListener('mousemove',e=>{if(!pinned)show(el.dataset.tip,e,false)});el.addEventListener('mouseleave',()=>{if(!pinned)tip.style.display='none'});el.addEventListener('click',e=>{e.stopPropagation();pinned=el;show(el.dataset.tip,e,true)})});
  document.addEventListener('click',e=>{if(pinned&&!tip.contains(e.target)){pinned=null;tip.style.display='none'}});
-}).catch(e=>{document.getElementById('head').innerHTML='<p class="flag">Could not load figure data.</p>';console.error(e)});
+}).catch(e=>{document.getElementById('assist').innerHTML='<p class="flag">Could not load figure data.</p>';console.error(e)});
 </script></body></html>
